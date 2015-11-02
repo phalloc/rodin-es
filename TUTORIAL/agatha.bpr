@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="agatha_hates/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(persons,{Agatha},{butler},{Charles}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2,p3,p4"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2,p3,p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(persons,{Agatha},{butler},{Charles})">
+<org.eventb.core.prIdent name="Agatha" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="Charles" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="butler" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="richer∈persons ↔ persons">
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+<org.eventb.core.prIdent name="richer" org.eventb.core.type="ℙ(persons×persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬Agatha=Charles">
+<org.eventb.core.prIdent name="Agatha" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="Charles" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀x⦂persons,y⦂persons·x∈persons∧y∈persons∧¬x=y⇒(x ↦ y∈richer⇔¬y ↦ x∈richer)">
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+<org.eventb.core.prIdent name="richer" org.eventb.core.type="ℙ(persons×persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="persons={Agatha,butler,Charles}">
+<org.eventb.core.prIdent name="Agatha" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="Charles" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="butler" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬Agatha=butler">
+<org.eventb.core.prIdent name="Agatha" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="butler" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="killer∈persons">
+<org.eventb.core.prIdent name="killer" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬butler=Charles">
+<org.eventb.core.prIdent name="Charles" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="butler" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀x⦂persons,y⦂persons·x∈persons∧y∈persons∧x≠y⇒(x ↦ y∈richer⇔y ↦ x∉richer)">
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+<org.eventb.core.prIdent name="richer" org.eventb.core.type="ℙ(persons×persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="killer ↦ Agatha∉richer">
+<org.eventb.core.prIdent name="Agatha" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="killer" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+<org.eventb.core.prIdent name="richer" org.eventb.core.type="ℙ(persons×persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀x⦂persons,y⦂persons·¬x=y⇒(x ↦ y∈richer⇔¬y ↦ x∈richer)">
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+<org.eventb.core.prIdent name="richer" org.eventb.core.type="ℙ(persons×persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="∀x⦂persons,y⦂persons·⊤∧⊤∧¬x=y⇒(x ↦ y∈richer⇔¬y ↦ x∈richer)">
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+<org.eventb.core.prIdent name="richer" org.eventb.core.type="ℙ(persons×persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬killer ↦ Agatha∈richer">
+<org.eventb.core.prIdent name="Agatha" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="killer" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+<org.eventb.core.prIdent name="richer" org.eventb.core.type="ℙ(persons×persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="hates∈persons ↔ persons">
+<org.eventb.core.prIdent name="hates" org.eventb.core.type="ℙ(persons×persons)"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="solution/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(persons,{Agatha},{butler},{Charles}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2,p3,p4"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2,p3,p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p16"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p18"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(persons,{Agatha},{butler},{Charles})">
+<org.eventb.core.prIdent name="Agatha" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="Charles" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="butler" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="richer∈persons ↔ persons">
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+<org.eventb.core.prIdent name="richer" org.eventb.core.type="ℙ(persons×persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬Agatha=Charles">
+<org.eventb.core.prIdent name="Agatha" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="Charles" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀x⦂persons,y⦂persons·x∈persons∧y∈persons∧¬x=y⇒(x ↦ y∈richer⇔¬y ↦ x∈richer)">
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+<org.eventb.core.prIdent name="richer" org.eventb.core.type="ℙ(persons×persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="persons={Agatha,butler,Charles}">
+<org.eventb.core.prIdent name="Agatha" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="Charles" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="butler" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬Agatha=butler">
+<org.eventb.core.prIdent name="Agatha" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="butler" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="killer∈persons">
+<org.eventb.core.prIdent name="killer" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="∀x⦂persons·¬hates[{x}]=persons">
+<org.eventb.core.prIdent name="hates" org.eventb.core.type="ℙ(persons×persons)"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬butler=Charles">
+<org.eventb.core.prIdent name="Charles" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="butler" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀x⦂persons,y⦂persons·x∈persons∧y∈persons∧x≠y⇒(x ↦ y∈richer⇔y ↦ x∉richer)">
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+<org.eventb.core.prIdent name="richer" org.eventb.core.type="ℙ(persons×persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="killer ↦ Agatha∉richer">
+<org.eventb.core.prIdent name="Agatha" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="killer" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+<org.eventb.core.prIdent name="richer" org.eventb.core.type="ℙ(persons×persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="∀x⦂persons·x∈persons⇒¬hates[{x}]=persons">
+<org.eventb.core.prIdent name="hates" org.eventb.core.type="ℙ(persons×persons)"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="∀x⦂persons,y⦂persons·¬x=y⇒(x ↦ y∈richer⇔¬y ↦ x∈richer)">
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+<org.eventb.core.prIdent name="richer" org.eventb.core.type="ℙ(persons×persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="∀x⦂persons,y⦂persons·⊤∧⊤∧¬x=y⇒(x ↦ y∈richer⇔¬y ↦ x∈richer)">
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+<org.eventb.core.prIdent name="richer" org.eventb.core.type="ℙ(persons×persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="∀x⦂persons·⊤⇒¬hates[{x}]=persons">
+<org.eventb.core.prIdent name="hates" org.eventb.core.type="ℙ(persons×persons)"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬killer ↦ Agatha∈richer">
+<org.eventb.core.prIdent name="Agatha" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="killer" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+<org.eventb.core.prIdent name="richer" org.eventb.core.type="ℙ(persons×persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="∀x⦂persons·¬x ↦ Agatha∈richer⇒butler ↦ x∈hates">
+<org.eventb.core.prIdent name="Agatha" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="butler" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="hates" org.eventb.core.type="ℙ(persons×persons)"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+<org.eventb.core.prIdent name="richer" org.eventb.core.type="ℙ(persons×persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀x⦂persons·x∈persons⇒hates[{x}]≠persons">
+<org.eventb.core.prIdent name="hates" org.eventb.core.type="ℙ(persons×persons)"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀x⦂persons·x ↦ Agatha∉richer⇒butler ↦ x∈hates">
+<org.eventb.core.prIdent name="Agatha" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="butler" org.eventb.core.type="persons"/>
+<org.eventb.core.prIdent name="hates" org.eventb.core.type="ℙ(persons×persons)"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+<org.eventb.core.prIdent name="richer" org.eventb.core.type="ℙ(persons×persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="hates∈persons ↔ persons">
+<org.eventb.core.prIdent name="hates" org.eventb.core.type="ℙ(persons×persons)"/>
+<org.eventb.core.prIdent name="persons" org.eventb.core.type="ℙ(persons)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="12">
+<org.eventb.core.poIdentifier name="persons" org.eventb.core.type="ℙ(persons)"/>
+<org.eventb.core.poIdentifier name="Agatha" org.eventb.core.type="persons"/>
+<org.eventb.core.poIdentifier name="Charles" org.eventb.core.type="persons"/>
+<org.eventb.core.poIdentifier name="butler" org.eventb.core.type="persons"/>
+<org.eventb.core.poIdentifier name="hates" org.eventb.core.type="ℙ(persons×persons)"/>
+<org.eventb.core.poIdentifier name="killer" org.eventb.core.type="persons"/>
+<org.eventb.core.poIdentifier name="richer" org.eventb.core.type="ℙ(persons×persons)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="solution/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TUTORIAL/agatha.bpo|org.eventb.core.poFile#agatha|org.eventb.core.poPredicateSet#HYP2"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="killer=Agatha" org.eventb.core.source="/TUTORIAL/agatha.buc|org.eventb.core.contextFile#agatha|org.eventb.core.axiom#="/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TUTORIAL/agatha.buc|org.eventb.core.contextFile#agatha|org.eventb.core.axiom#="/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TUTORIAL/agatha.bpo|org.eventb.core.poFile#agatha|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/TUTORIAL/agatha.bpo|org.eventb.core.poFile#agatha|org.eventb.core.poPredicateSet#HYP2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYP2" org.eventb.core.parentSet="/TUTORIAL/agatha.bpo|org.eventb.core.poFile#agatha|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(persons,{Agatha},{butler},{Charles})" org.eventb.core.source="/TUTORIAL/agatha.buc|org.eventb.core.contextFile#agatha|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="hates∈persons ↔ persons" org.eventb.core.source="/TUTORIAL/agatha.buc|org.eventb.core.contextFile#agatha|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="richer∈persons ↔ persons" org.eventb.core.source="/TUTORIAL/agatha.buc|org.eventb.core.contextFile#agatha|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀x⦂persons,y⦂persons·x∈persons∧y∈persons∧x≠y⇒(x ↦ y∈richer⇔y ↦ x∉richer)" org.eventb.core.source="/TUTORIAL/agatha.buc|org.eventb.core.contextFile#agatha|org.eventb.core.axiom#2"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="killer∈persons" org.eventb.core.source="/TUTORIAL/agatha.buc|org.eventb.core.contextFile#agatha|org.eventb.core.axiom#4"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="killer ↦ Agatha∈hates" org.eventb.core.source="/TUTORIAL/agatha.buc|org.eventb.core.contextFile#agatha|org.eventb.core.axiom#5"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="killer ↦ Agatha∉richer" org.eventb.core.source="/TUTORIAL/agatha.buc|org.eventb.core.contextFile#agatha|org.eventb.core.axiom#6"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="hates[{Agatha}]∩hates[{Charles}]=(∅ ⦂ ℙ(persons))" org.eventb.core.source="/TUTORIAL/agatha.buc|org.eventb.core.contextFile#agatha|org.eventb.core.axiom#7"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="hates[{Agatha}]=persons ∖ {butler}" org.eventb.core.source="/TUTORIAL/agatha.buc|org.eventb.core.contextFile#agatha|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="∀x⦂persons·x ↦ Agatha∉richer⇒butler ↦ x∈hates" org.eventb.core.source="/TUTORIAL/agatha.buc|org.eventb.core.contextFile#agatha|org.eventb.core.axiom#9"/>
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="hates[{Agatha}]⊆hates[{butler}]" org.eventb.core.source="/TUTORIAL/agatha.buc|org.eventb.core.contextFile#agatha|org.eventb.core.axiom#:"/>
+<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="∀x⦂persons·x∈persons⇒hates[{x}]≠persons" org.eventb.core.source="/TUTORIAL/agatha.buc|org.eventb.core.contextFile#agatha|org.eventb.core.axiom#;"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TUTORIAL/agatha.bpo|org.eventb.core.poFile#agatha|org.eventb.core.poPredicateSet#HYP2" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="killer=Agatha" org.eventb.core.source="/TUTORIAL/agatha.buc|org.eventb.core.contextFile#agatha|org.eventb.core.axiom#="/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
