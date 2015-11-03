@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="FILES" org.eventb.core.type="ℙ(FILES)"/>
+<org.eventb.core.poIdentifier name="MODES" org.eventb.core.type="ℙ(MODES)"/>
+<org.eventb.core.poIdentifier name="UEMAILS" org.eventb.core.type="ℙ(UEMAILS)"/>
+<org.eventb.core.poIdentifier name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+<org.eventb.core.poIdentifier name="UTYPES" org.eventb.core.type="ℙ(UTYPES)"/>
+<org.eventb.core.poIdentifier name="BASIC" org.eventb.core.type="UTYPES"/>
+<org.eventb.core.poIdentifier name="PREMIUM" org.eventb.core.type="UTYPES"/>
+<org.eventb.core.poIdentifier name="READONLY" org.eventb.core.type="MODES"/>
+<org.eventb.core.poIdentifier name="REGULAR" org.eventb.core.type="MODES"/>
+<org.eventb.core.poIdentifier name="SECURE" org.eventb.core.type="MODES"/>
+<org.eventb.core.poPredicate name="READONLZ" org.eventb.core.predicate="partition(UTYPES,{BASIC},{PREMIUM})" org.eventb.core.source="/PROJECT_1/ctx1.buc|org.eventb.core.contextFile#ctx1|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="READONL[" org.eventb.core.predicate="partition(MODES,{REGULAR},{SECURE},{READONLY})" org.eventb.core.source="/PROJECT_1/ctx1.buc|org.eventb.core.contextFile#ctx1|org.eventb.core.axiom#2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="reg_users" org.eventb.core.type="ℙ(USERS)"/>
+<org.eventb.core.poIdentifier name="reg_users_email" org.eventb.core.type="ℙ(USERS×UEMAILS)"/>
+<org.eventb.core.poIdentifier name="reg_users_profile" org.eventb.core.type="ℙ(USERS×UTYPES)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USERS×UTYPES))∈(∅ ⦂ ℙ(USERS)) → UTYPES" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USERS×UEMAILS))∈(∅ ⦂ ℙ(USERS)) → UEMAILS" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilf" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="reg_users'" org.eventb.core.type="ℙ(USERS)"/>
+<org.eventb.core.poIdentifier name="reg_users_email'" org.eventb.core.type="ℙ(USERS×UEMAILS)"/>
+<org.eventb.core.poIdentifier name="reg_users_profile'" org.eventb.core.type="ℙ(USERS×UTYPES)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilf" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilf" org.eventb.core.poStamp="4"/>
+<org.eventb.core.poSequent name="newUser/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilg"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reg_users_profile{usr ↦ type}∈reg_users∪{usr} → UTYPES" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poSequent#newUser\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="newUser/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilg"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reg_users_email{usr ↦ mail}∈reg_users∪{usr} → UEMAILS" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poSequent#newUser\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilg" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+<org.eventb.core.poIdentifier name="type" org.eventb.core.type="UTYPES"/>
+<org.eventb.core.poIdentifier name="mail" org.eventb.core.type="UEMAILS"/>
+<org.eventb.core.poIdentifier name="usr" org.eventb.core.type="USERS"/>
+<org.eventb.core.poIdentifier name="reg_users'" org.eventb.core.type="ℙ(USERS)"/>
+<org.eventb.core.poIdentifier name="reg_users_email'" org.eventb.core.type="ℙ(USERS×UEMAILS)"/>
+<org.eventb.core.poIdentifier name="reg_users_profile'" org.eventb.core.type="ℙ(USERS×UTYPES)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilg" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilg" org.eventb.core.poStamp="15">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usr∈USERS" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#\/|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="type∈UTYPES" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#\/|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="mail∈UEMAILS" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#\/|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="usr∉reg_users" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#\/|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="removeUser/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="21">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilh"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{usr} ⩤ reg_users_profile∈reg_users ∖ {usr} → UTYPES" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poSequent#removeUser\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="removeUser/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="21">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilh"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{usr} ⩤ reg_users_email∈reg_users ∖ {usr} → UEMAILS" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poSequent#removeUser\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilh" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="21">
+<org.eventb.core.poIdentifier name="usr" org.eventb.core.type="USERS"/>
+<org.eventb.core.poIdentifier name="reg_users'" org.eventb.core.type="ℙ(USERS)"/>
+<org.eventb.core.poIdentifier name="reg_users_email'" org.eventb.core.type="ℙ(USERS×UEMAILS)"/>
+<org.eventb.core.poIdentifier name="reg_users_profile'" org.eventb.core.type="ℙ(USERS×UTYPES)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilh" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilh" org.eventb.core.poStamp="21">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usr∈reg_users" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#0|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="upgradePremium/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="25">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTHYPreg_users_profili'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="usr∈dom(reg_users_profile)∧reg_users_profile∈USERS ⇸ UTYPES" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#1|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#1|org.eventb.core.guard#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTHYPreg_users_profili'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="upgradePremium/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="25">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profili"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reg_users_profile{usr ↦ PREMIUM}∈reg_users → UTYPES" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poSequent#upgradePremium\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profili" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="23">
+<org.eventb.core.poIdentifier name="usr" org.eventb.core.type="USERS"/>
+<org.eventb.core.poIdentifier name="reg_users_profile'" org.eventb.core.type="ℙ(USERS×UTYPES)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreg_users_profili'" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profili" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usr∈reg_users" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#1|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profili" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTHYPreg_users_profili'" org.eventb.core.poStamp="25">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="reg_users_profile(usr)=BASIC" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#1|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="downgradeBasic/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilj'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="usr∈dom(reg_users_profile)∧reg_users_profile∈USERS ⇸ UTYPES" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#2|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#2|org.eventb.core.guard#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilj'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="downgradeBasic/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilj"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reg_users_profile{usr ↦ BASIC}∈reg_users → UTYPES" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poSequent#downgradeBasic\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilj" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="usr" org.eventb.core.type="USERS"/>
+<org.eventb.core.poIdentifier name="reg_users_profile'" org.eventb.core.type="ℙ(USERS×UTYPES)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreg_users_profilj'" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilj" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usr∈reg_users" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#2|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilj" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilj'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="reg_users_profile(usr)=PREMIUM" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#2|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/PROJECT_1/mac_users.bpo|org.eventb.core.poFile#mac_users|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="reg_users⊆USERS" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="reg_users_profile∈reg_users → UTYPES" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="reg_users_email∈reg_users → UEMAILS" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.invariant#."/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
