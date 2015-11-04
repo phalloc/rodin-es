@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="7">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="7">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="FILES" org.eventb.core.type="ℙ(FILES)"/>
 <org.eventb.core.poIdentifier name="MODES" org.eventb.core.type="ℙ(MODES)"/>
 <org.eventb.core.poIdentifier name="UEMAILS" org.eventb.core.type="ℙ(UEMAILS)"/>
@@ -12,7 +12,7 @@
 <org.eventb.core.poIdentifier name="REGULAR" org.eventb.core.type="MODES"/>
 <org.eventb.core.poIdentifier name="SECURE" org.eventb.core.type="MODES"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/PROJECT_1/ctx1.bpo|org.eventb.core.poFile#ctx1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/PROJECT_1/ctx1.bpo|org.eventb.core.poFile#ctx1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(UTYPES,{BASIC},{PREMIUM})" org.eventb.core.source="/PROJECT_1/ctx1.buc|org.eventb.core.contextFile#ctx1|org.eventb.core.axiom#,"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(MODES,{REGULAR},{SECURE},{READONLY})" org.eventb.core.source="/PROJECT_1/ctx1.buc|org.eventb.core.contextFile#ctx1|org.eventb.core.axiom#2"/>
 </org.eventb.core.poPredicateSet>
