@@ -42,5 +42,6 @@
 <org.eventb.core.action name="." org.eventb.core.assignment="file_size(file) ≔ size" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="/" org.eventb.core.assignment="file_owner(file) ≔ owner" org.eventb.core.label="act3"/>
 <org.eventb.core.action name="0" org.eventb.core.assignment="file_version(file) ≔ 1" org.eventb.core.label="act4"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd4" org.eventb.core.predicate="file ∉ files"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>
