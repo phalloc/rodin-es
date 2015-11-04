@@ -13,6 +13,7 @@
 <org.eventb.core.action name="-" org.eventb.core.assignment="file_archive ≔ ∅" org.eventb.core.label="act10"/>
 <org.eventb.core.action name="." org.eventb.core.assignment="user_local_file ≔ ∅" org.eventb.core.label="act11"/>
 <org.eventb.core.action name="/" org.eventb.core.assignment="user_local_version ≔ ∅" org.eventb.core.label="act12"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="local ≔ ∅" org.eventb.core.label="act13"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="newUser">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="newUser"/>
@@ -76,11 +77,14 @@
 <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="file_owner(file) = usr"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="user_local_file(usr) ≔ file" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="user_local_version(file) ≔ file_version(file)" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="local ≔ local ∪ {file ↦ {usr ↦ file_version(file)}}" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="B" org.eventb.core.identifier="file_archive"/>
 <org.eventb.core.invariant name="C" org.eventb.core.label="inv7" org.eventb.core.predicate="file_archive ∈ FILES ⇸ ℕ1"/>
 <org.eventb.core.variable name="D" org.eventb.core.identifier="user_local_file"/>
 <org.eventb.core.variable name="F" org.eventb.core.identifier="user_local_version"/>
 <org.eventb.core.invariant name="G" org.eventb.core.label="inv8" org.eventb.core.predicate="user_local_file ∈ reg_users ⇸ files"/>
-<org.eventb.core.invariant name="H" org.eventb.core.label="inv9" org.eventb.core.predicate="user_local_version ∈ files ⇸ ℕ1"/>
+<org.eventb.core.invariant name="H" org.eventb.core.label="inv9" org.eventb.core.predicate="user_local_version ∈ files ↔ ℕ1"/>
+<org.eventb.core.variable name="I" org.eventb.core.identifier="local"/>
+<org.eventb.core.invariant name="J" org.eventb.core.label="inv10" org.eventb.core.predicate="local ∈ files ↔ reg_users × ℕ1"/>
 </org.eventb.core.machineFile>
