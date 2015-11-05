@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="127">
+<org.eventb.core.poFile org.eventb.core.poStamp="128">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="FILES" org.eventb.core.type="ℙ(FILES)"/>
 <org.eventb.core.poIdentifier name="MODES" org.eventb.core.type="ℙ(MODES)"/>
@@ -269,13 +269,13 @@
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usr∈reg_users" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#=|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="file∈files" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#=|org.eventb.core.guard#+"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="uploadFile/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="125">
+<org.eventb.core.poSequent name="uploadFile/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="128">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilm("/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="file∈dom(file_local)∧file_local∈FILES ⇸ USERS × ℤ∧file∈dom(file_version)∧file_version∈FILES ⇸ ℤ" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#@|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="file∈dom(file_version)∧file_version∈FILES ⇸ ℤ" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#@|org.eventb.core.guard#,"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#@|org.eventb.core.guard#,"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PROJECT_1/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilm("/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="uploadFile/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="125">
+<org.eventb.core.poSequent name="uploadFile/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="128">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilm"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="file_version{file ↦ file_version(file)+1}∈files → ℕ1" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.invariant#8"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#@"/>
@@ -283,7 +283,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/PROJECT_1/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poSequent#uploadFile\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="uploadFile/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="125">
+<org.eventb.core.poSequent name="uploadFile/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="128">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilm"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="file∈dom(file_version)∧file_version∈FILES ⇸ ℤ" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#@|org.eventb.core.action#+"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#@|org.eventb.core.action#+"/>
@@ -298,8 +298,8 @@
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="file∈files" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#@|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="file∈dom(file_local)" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#@|org.eventb.core.guard#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilm" org.eventb.core.parentSet="/PROJECT_1/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilm(" org.eventb.core.poStamp="121">
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ran({usr} ◁ {file_local(file)})={file_version(file)}" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#@|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilm" org.eventb.core.parentSet="/PROJECT_1/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilm(" org.eventb.core.poStamp="128">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ran({usr} ◁ file_local[{file}])={file_version(file)}" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#@|org.eventb.core.guard#,"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poSequent name="downloadFile/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="126">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profiln"/>

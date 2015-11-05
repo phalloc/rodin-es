@@ -71,7 +71,7 @@
 <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="file ∈ files"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="file ∈ dom(file_local)"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="file_version(file) ≔ file_version(file) + 1" org.eventb.core.label="act1"/>
-<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="ran( {usr} ◁ {file_local(file)}) = {file_version(file)}"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="ran( {usr} ◁ file_local[{file}]) = {file_version(file)}"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="downloadFile">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="file"/>

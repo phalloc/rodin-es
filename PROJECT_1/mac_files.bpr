@@ -1608,11 +1608,11 @@
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(UTYPES,{BASIC},{PREMIUM}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9,p10"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9,p10"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p9,p10"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(MODES,{REGULAR},{SECURE},{READONLY}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11,p12,p13,p14"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11,p12,p13,p14"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p11,p12,p13,p14"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
@@ -1620,7 +1620,7 @@
 <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p16"/>
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ah (file_version(file)+1∈ℕ1)" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p17">
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p17" org.eventb.core.prHyps="p6,p5">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p17" org.eventb.core.prHyps="p7,p6">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p18">
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19">
@@ -1630,18 +1630,18 @@
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p20" org.eventb.core.prHyps="p6,p5">
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p20" org.eventb.core.prHyps="p7,p6">
 <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p2"/>
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p20" org.eventb.core.prHyps="p2,p4,p7,p8,p9,p10,p11,p12,p13,p14,p6,p5">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p20" org.eventb.core.prHyps="p3,p5,p8,p1,p9,p10,p11,p12,p13,p14,p7,p6">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R30000"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name=")" org.eventb.core.prHyps="p20,p6,p5">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2,p4,p7,p8,p9,p10,p11,p12,p13,p14,p20,p6,p5">
+<org.eventb.core.prAnte name=")" org.eventb.core.prHyps="p20,p7,p6">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3,p5,p8,p1,p9,p10,p11,p12,p13,p14,p20,p7,p6">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R30000"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -1666,36 +1666,36 @@
 <org.eventb.core.prIdent name="files" org.eventb.core.type="ℙ(FILES)"/>
 <org.eventb.core.prIdent name="usr" org.eventb.core.type="USERS"/>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="files⊆FILES"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="ran({usr} ◁ file_local[{file}])={file_version(file)}"/>
 <org.eventb.core.prPred name="p18" org.eventb.core.predicate="⊤∧⊤"/>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬REGULAR=READONLY"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="file∈dom(file_version)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="file∈dom(file_version)"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="file_version{file ↦ file_version(file)+1}∈files → ℕ1"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="ran({usr} ◁ {file_local(file)})={file_version(file)}"/>
 <org.eventb.core.prPred name="p13" org.eventb.core.predicate="MODES={REGULAR,SECURE,READONLY}"/>
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="file∈dom(file_version)∧file_version∈FILES ⇸ ℤ"/>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="reg_users⊆USERS">
 <org.eventb.core.prIdent name="reg_users" org.eventb.core.type="ℙ(USERS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(UTYPES,{BASIC},{PREMIUM})"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="file_version∈files → ℕ1"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(MODES,{REGULAR},{SECURE},{READONLY})"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(UTYPES,{BASIC},{PREMIUM})"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="file_version∈files → ℕ1"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(MODES,{REGULAR},{SECURE},{READONLY})"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="UTYPES={BASIC,PREMIUM}"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="file∈files"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="file_version∈FILES ⇸ ℤ"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="file∈files"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="file_version∈FILES ⇸ ℤ"/>
 <org.eventb.core.prPred name="p20" org.eventb.core.predicate="file_version(file)+1∈ℕ1"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬BASIC=PREMIUM"/>
 <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬REGULAR=SECURE"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="file∈dom(file_local)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="file∈dom(file_local)"/>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬SECURE=READONLY"/>
-<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.cut"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.cut"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-<org.eventb.core.prReas name="r7" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="uploadFile/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="FILES">
 <org.eventb.core.lang name="L"/>
@@ -3166,41 +3166,32 @@
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="uploadFile/grd3/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="FILES,USERS">
+<org.eventb.core.prProof name="uploadFile/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="FILES">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(UTYPES,{BASIC},{PREMIUM}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5,p6"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p5,p6"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(MODES,{REGULAR},{SECURE},{READONLY}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8,p9,p10,p11"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p8,p9,p10,p11"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p12">
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p13">
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7,p8,p9,p10"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p7,p8,p9,p10"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p15"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p16"/>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p17">
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p17" org.eventb.core.prHyps="p1">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p13">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="p1">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p2">
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p2" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p2" org.eventb.core.prHyps="p2"/>
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
 <org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
-<org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p18">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="p1"/>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p14">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p14" org.eventb.core.prHyps="p1"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -3212,73 +3203,67 @@
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="file" org.eventb.core.type="FILES"/>
-<org.eventb.core.prIdent name="file_local" org.eventb.core.type="ℙ(FILES×(USERS×ℤ))"/>
 <org.eventb.core.prIdent name="file_version" org.eventb.core.type="ℙ(FILES×ℤ)"/>
 <org.eventb.core.prIdent name="files" org.eventb.core.type="ℙ(FILES)"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="files⊆FILES"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬REGULAR=READONLY">
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="files⊆FILES"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬REGULAR=READONLY">
 <org.eventb.core.prIdent name="MODES" org.eventb.core.type="ℙ(MODES)"/>
 <org.eventb.core.prIdent name="READONLY" org.eventb.core.type="MODES"/>
 <org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="MODES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="⊤∧file_local∈FILES ⇸ USERS × ℤ∧file∈dom(file_version)∧file_version∈FILES ⇸ ℤ"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="file∈dom(file_version)"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="file∈dom(file_local)∧file_local∈FILES ⇸ USERS × ℤ∧file∈dom(file_version)∧file_version∈FILES ⇸ ℤ"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="MODES={REGULAR,SECURE,READONLY}">
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="file∈dom(file_version)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="MODES={REGULAR,SECURE,READONLY}">
 <org.eventb.core.prIdent name="MODES" org.eventb.core.type="ℙ(MODES)"/>
 <org.eventb.core.prIdent name="READONLY" org.eventb.core.type="MODES"/>
 <org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="MODES"/>
 <org.eventb.core.prIdent name="SECURE" org.eventb.core.type="MODES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="reg_users⊆USERS">
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="file∈dom(file_version)∧file_version∈FILES ⇸ ℤ"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="reg_users⊆USERS">
+<org.eventb.core.prIdent name="USERS" org.eventb.core.type="ℙ(USERS)"/>
 <org.eventb.core.prIdent name="reg_users" org.eventb.core.type="ℙ(USERS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(UTYPES,{BASIC},{PREMIUM})">
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(UTYPES,{BASIC},{PREMIUM})">
 <org.eventb.core.prIdent name="BASIC" org.eventb.core.type="UTYPES"/>
 <org.eventb.core.prIdent name="PREMIUM" org.eventb.core.type="UTYPES"/>
 <org.eventb.core.prIdent name="UTYPES" org.eventb.core.type="ℙ(UTYPES)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="file_version∈files → ℕ1"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="partition(MODES,{REGULAR},{SECURE},{READONLY})">
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="partition(MODES,{REGULAR},{SECURE},{READONLY})">
 <org.eventb.core.prIdent name="MODES" org.eventb.core.type="ℙ(MODES)"/>
 <org.eventb.core.prIdent name="READONLY" org.eventb.core.type="MODES"/>
 <org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="MODES"/>
 <org.eventb.core.prIdent name="SECURE" org.eventb.core.type="MODES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="UTYPES={BASIC,PREMIUM}">
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="UTYPES={BASIC,PREMIUM}">
 <org.eventb.core.prIdent name="BASIC" org.eventb.core.type="UTYPES"/>
 <org.eventb.core.prIdent name="PREMIUM" org.eventb.core.type="UTYPES"/>
 <org.eventb.core.prIdent name="UTYPES" org.eventb.core.type="ℙ(UTYPES)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="file∈files"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="file_version∈FILES ⇸ ℤ"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="file_local∈FILES ⇸ USERS × ℤ"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="file_local∈FILES ⇸ USERS × ℤ∧file∈dom(file_version)∧file_version∈FILES ⇸ ℤ"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬BASIC=PREMIUM">
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="file_version∈FILES ⇸ ℤ"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬BASIC=PREMIUM">
 <org.eventb.core.prIdent name="BASIC" org.eventb.core.type="UTYPES"/>
 <org.eventb.core.prIdent name="PREMIUM" org.eventb.core.type="UTYPES"/>
 <org.eventb.core.prIdent name="UTYPES" org.eventb.core.type="ℙ(UTYPES)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬REGULAR=SECURE">
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬REGULAR=SECURE">
 <org.eventb.core.prIdent name="MODES" org.eventb.core.type="ℙ(MODES)"/>
 <org.eventb.core.prIdent name="REGULAR" org.eventb.core.type="MODES"/>
 <org.eventb.core.prIdent name="SECURE" org.eventb.core.type="MODES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="file∈dom(file_local)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬SECURE=READONLY">
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬SECURE=READONLY">
 <org.eventb.core.prIdent name="MODES" org.eventb.core.type="ℙ(MODES)"/>
 <org.eventb.core.prIdent name="READONLY" org.eventb.core.type="MODES"/>
 <org.eventb.core.prIdent name="SECURE" org.eventb.core.type="MODES"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prExpr name="e0" org.eventb.core.expression="files"/>
-<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
-<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="uploadFile/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14" org.eventb.core.prSets="FILES,MODES,UEMAILS,USERS,UTYPES">
 <org.eventb.core.lang name="L"/>
