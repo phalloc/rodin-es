@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="mac_files"/>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="ctx1"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="reg_users"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="reg_users_profile"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="reg_users_email"/>
+<org.eventb.core.variable name="1" org.eventb.core.identifier="files"/>
+<org.eventb.core.variable name="2" org.eventb.core.identifier="file_size"/>
+<org.eventb.core.variable name="3" org.eventb.core.identifier="file_owner"/>
+<org.eventb.core.variable name="4" org.eventb.core.identifier="file_version"/>
+<org.eventb.core.variable name="B" org.eventb.core.identifier="file_archive"/>
+<org.eventb.core.variable name="I" org.eventb.core.identifier="file_local"/>
+<org.eventb.core.variable name="L" org.eventb.core.identifier="file_access"/>
+<org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="file_access ≔ ∅" org.eventb.core.label="act14"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="N" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="newUser">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="newUser"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="O" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="removeUser">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="removeUser"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="P" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="upgradePremium">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="upgradePremium"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="downgradeBasic">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="downgradeBasic"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="R" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="addFile">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="addFile"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="file_access ≔ file_access ∪ {file ↦ owner}" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="S" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="removeFile">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="removeFile"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="file ∈ dom(file_access)"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd7" org.eventb.core.predicate="usr ∈ {file_access(file)}"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="T" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="uploadFile">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="uploadFile"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="usr ∈ {file_access(file)}"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="U" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="downloadFile">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="downloadFile"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="usr ∈ {file_access(file)}"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="V" org.eventb.core.label="inv1" org.eventb.core.predicate="file_access ∈ FILES ↔ reg_users"/>
+<org.eventb.core.invariant name="W" org.eventb.core.label="inv2" org.eventb.core.predicate="∀x·(x∈dom(file_owner)) ⇒ (∃y·(file_owner(x)=y ∧ y ∈ ran(file_access)))"/>
+</org.eventb.core.machineFile>

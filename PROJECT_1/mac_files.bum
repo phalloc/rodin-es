@@ -16,8 +16,15 @@
 <org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="newUser">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="newUser"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="removeUser">
+<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="removeUser">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="removeUser"/>
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="usr"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="usr ∈ reg_users"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="reg_users ≔ reg_users ∖ {usr}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="reg_users_profile ≔ {usr} ⩤ reg_users_profile" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="reg_users_email ≔ {usr} ⩤ reg_users_email" org.eventb.core.label="act3"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="usr ∉ ran(file_owner)"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="file_local ≔ file_local ⩥ {x↦y ∣ x=usr ∧ (x↦y) ∈ ran(file_local)}" org.eventb.core.label="act4"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="upgradePremium">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="upgradePremium"/>
@@ -49,9 +56,8 @@
 <org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="removeFile">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="file"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="usr"/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="file ∈ files"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="usr ∈ reg_users"/>
-<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="file_owner(file) = usr"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="usr ∈ reg_users"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="file ∈ files"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="files ≔ files ∖ {file}" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="-" org.eventb.core.assignment="file_size ≔ {file} ⩤ file_size" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="." org.eventb.core.assignment="file_owner ≔ {file} ⩤ file_owner" org.eventb.core.label="act3"/>
@@ -63,16 +69,16 @@
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="file"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="usr"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="file ∈ files"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="file_owner(file) = usr"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="file ∈ dom(file_local)"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="file_version(file) ≔ file_version(file) + 1" org.eventb.core.label="act1"/>
-<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="ran( {usr} ◁ file_local(file)) = file_version(file)"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="ran( {usr} ◁ {file_local(file)}) = {file_version(file)}"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="downloadFile">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="file"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="usr"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="file ∈ files"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="file_owner(file) = usr"/>
 <org.eventb.core.action name="-" org.eventb.core.assignment="file_local ≔ file_local ∪ {file ↦ (usr ↦ file_version(file))}" org.eventb.core.label="act3"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd3" org.eventb.core.predicate="usr ∈ reg_users"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="B" org.eventb.core.identifier="file_archive"/>
 <org.eventb.core.invariant name="C" org.eventb.core.label="inv7" org.eventb.core.predicate="file_archive ∈ FILES ⇸ ℕ1"/>
