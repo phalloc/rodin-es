@@ -28,6 +28,7 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="]" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="downgradeBasic">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="downgradeBasic"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="∃f·(f∈dom(backup_file) ∧ backup_file(f) = TRUE ∧ usr∈file_access[{f}]) ⇒ card(file_access ∖ {x↦y ∣ y∈dom(reg_users_profile) ∧ reg_users_profile(y)=PREMIUM ∧ x=f})&gt;1 "/>
 </org.eventb.core.event>
 <org.eventb.core.event name="^" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="addFile">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="addFile"/>
@@ -36,9 +37,11 @@
 <org.eventb.core.event name="_" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="removeFile">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="removeFile"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="backup_logs ≔ {file} ⩤ backup_logs" org.eventb.core.label="act10"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="backup_file ≔ {file} ⩤ backup_file" org.eventb.core.label="act11"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="`" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="uploadFile">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="uploadFile"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="backup_file(file) = FALSE"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="a" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="downloadFile">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="downloadFile"/>
@@ -48,6 +51,7 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="c" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="removeShare">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="removeShare"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="backup_file(file) = FALSE"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="d" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="changeSharingMode">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="changeSharingMode"/>
@@ -56,7 +60,7 @@
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="changeSharingMode2"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="f" org.eventb.core.identifier="backup_file"/>
-<org.eventb.core.invariant name="g" org.eventb.core.label="inv1" org.eventb.core.predicate="backup_file ∈ FILES ⇸ BOOL"/>
+<org.eventb.core.invariant name="g" org.eventb.core.label="inv1" org.eventb.core.predicate="backup_file ∈ files → BOOL"/>
 <org.eventb.core.variable name="h" org.eventb.core.identifier="backup_logs"/>
 <org.eventb.core.invariant name="i" org.eventb.core.label="inv2" org.eventb.core.predicate="backup_logs ∈ files ↔ ℕ1"/>
 <org.eventb.core.invariant name="j" org.eventb.core.label="inv3" org.eventb.core.predicate="∀f,n·((f↦n)∈backup_logs ∧ f∈dom(backup_file)) ⇒ backup_file(f) = TRUE"/>
@@ -68,6 +72,7 @@
 <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="(file↦usr) ∈ file_access"/>
 <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="∃x·((file↦x)∈file_access ∧ x∈reg_users) ⇒ reg_users_profile(x) = PREMIUM"/>
 <org.eventb.core.action name="." org.eventb.core.assignment="backup_file(file) ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="backup_file(file) = FALSE"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="l" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="turnOffBU">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="file"/>
@@ -77,12 +82,23 @@
 <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="(file↦usr) ∈ file_access"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="backup_file(file) ≔ FALSE" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="-" org.eventb.core.assignment="backup_logs ≔ {file} ⩤ backup_logs" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="backup_file(file) = TRUE"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="m" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="downloadFromArchive">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="file"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="usr"/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="file ∈ files"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="file ∈ FILES"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="usr ∈ reg_users"/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="(file↦usr) ∈ file_access"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="n" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="uploadFileWithBackup">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="uploadFile"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="backup_file(file) = TRUE"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="backup_logs ≔ backup_logs ∪ {file ↦ file_version(file) + 1}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="o" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="removeShareWithBackup">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="removeShare"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="backup_file(file) = TRUE"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd5" org.eventb.core.predicate="∃u·(u∈reg_users ∧ u≠usr2 ∧ u∈file_access[{file}] ∧ reg_users_profile(u)=PREMIUM)"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

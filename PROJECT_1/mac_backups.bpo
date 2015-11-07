@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="30">
+<org.eventb.core.poFile org.eventb.core.poStamp="56">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="FILES" org.eventb.core.type="ℙ(FILES)"/>
 <org.eventb.core.poIdentifier name="MODES" org.eventb.core.type="ℙ(MODES)"/>
@@ -43,22 +43,22 @@
 <org.eventb.core.poPredicate name="reg_users_profilr" org.eventb.core.predicate="∀f⦂FILES,u⦂USERS,n⦂ℤ·f∈dom(file_local)∧u ↦ n∈file_local[{f}]⇒n≤file_version(f)" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.invariant#^"/>
 <org.eventb.core.poPredicate name="reg_users_profils" org.eventb.core.predicate="∀f⦂FILES,u⦂USERS·f∈dom(file_mode)∧u∈file_access[{f}]∧file_mode(f)=SECURE⇒reg_users_profile(u)=PREMIUM" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.invariant#`"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="inv3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="30">
+<org.eventb.core.poSequent name="inv3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#HYPctxB"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀f⦂FILES,n⦂ℤ·f ↦ n∈backup_logs∧f∈dom(backup_file)⇒backup_file∈FILES ⇸ BOOL" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#j"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#j"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#HYPctxB"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="29">
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilf"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(FILES×BOOL))∈FILES ⇸ BOOL" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#g"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(FILES×BOOL))∈(∅ ⦂ ℙ(FILES)) → BOOL" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#g"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#M"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#Y"/>
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#g"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#HYPctxB|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="29">
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="32">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilf"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(FILES×ℤ))∈(∅ ⦂ ℙ(FILES)) ↔ ℕ1" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#i"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#M"/>
@@ -67,7 +67,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#HYPctxB|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="30">
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="32">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilf"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀f⦂FILES,n⦂ℤ·f ↦ n∈(∅ ⦂ ℙ(FILES×ℤ))∧f∈dom(∅ ⦂ ℙ(FILES×BOOL))⇒(∅ ⦂ ℙ(FILES×BOOL))(f)=TRUE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#j"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#M"/>
@@ -92,7 +92,7 @@
 <org.eventb.core.poIdentifier name="file_mode'" org.eventb.core.type="ℙ(FILES×MODES)"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilf" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilf" org.eventb.core.poStamp="3"/>
-<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilg" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilg" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="type" org.eventb.core.type="UTYPES"/>
 <org.eventb.core.poIdentifier name="mail" org.eventb.core.type="UEMAILS"/>
 <org.eventb.core.poIdentifier name="usr" org.eventb.core.type="USERS"/>
@@ -100,51 +100,60 @@
 <org.eventb.core.poIdentifier name="reg_users_email'" org.eventb.core.type="ℙ(USERS×UEMAILS)"/>
 <org.eventb.core.poIdentifier name="reg_users_profile'" org.eventb.core.type="ℙ(USERS×UTYPES)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilg" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilg" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilg" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilg" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usr∈USERS" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#\/|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="type∈UTYPES" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#\/|org.eventb.core.guard#+"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="mail∈UEMAILS" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#\/|org.eventb.core.guard#,"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="usr∉reg_users" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#\/|org.eventb.core.guard#-"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilh" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilh" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="usr" org.eventb.core.type="USERS"/>
 <org.eventb.core.poIdentifier name="reg_users'" org.eventb.core.type="ℙ(USERS)"/>
 <org.eventb.core.poIdentifier name="reg_users_email'" org.eventb.core.type="ℙ(USERS×UEMAILS)"/>
 <org.eventb.core.poIdentifier name="reg_users_profile'" org.eventb.core.type="ℙ(USERS×UTYPES)"/>
 <org.eventb.core.poIdentifier name="file_local'" org.eventb.core.type="ℙ(FILES×(USERS×ℤ))"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilh" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilh" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilh" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilh" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usr∈reg_users" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#.|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usr∉ran(file_owner)" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#.|org.eventb.core.guard#,"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usr∉ran(file_access)" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#O|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profili" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profili" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="usr" org.eventb.core.type="USERS"/>
 <org.eventb.core.poIdentifier name="reg_users_profile'" org.eventb.core.type="ℙ(USERS×UTYPES)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profili" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profili" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profili" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profili" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usr∈reg_users" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#1|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="reg_users_profile(usr)=BASIC" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#1|org.eventb.core.guard#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilj" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="30">
+<org.eventb.core.poSequent name="downgradeBasic/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="42">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profiljust"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀f⦂FILES·(f∈dom(backup_file)⇒backup_file∈FILES ⇸ BOOL)∧(f∈dom(backup_file)∧backup_file(f)=TRUE∧usr∈file_access[{f}]⇒(∀y⦂USERS·y∈dom(reg_users_profile)⇒reg_users_profile∈USERS ⇸ UTYPES)∧finite(file_access ∖ {x⦂FILES,y⦂USERS·y∈dom(reg_users_profile)∧reg_users_profile(y)=PREMIUM∧x=f ∣ x ↦ y}))" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#]|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#]|org.eventb.core.guard#("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profiljust"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilj" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="usr" org.eventb.core.type="USERS"/>
 <org.eventb.core.poIdentifier name="reg_users_profile'" org.eventb.core.type="ℙ(USERS×UTYPES)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilj" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilj" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTHYPreg_users_profiljust" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilj" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usr∈reg_users" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#2|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="reg_users_profile(usr)=PREMIUM" org.eventb.core.source="/PROJECT_1/mac_users.bum|org.eventb.core.machineFile#mac_users|org.eventb.core.event#2|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀f⦂FILES·f∈dom(file_access ▷ {usr})∧f∈files⇒file_mode(f)≠SECURE" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#Q|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="addFile/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilj" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profiljust" org.eventb.core.poStamp="42">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∃f⦂FILES·f∈dom(backup_file)∧backup_file(f)=TRUE∧usr∈file_access[{f}]⇒card(file_access ∖ {x⦂FILES,y⦂USERS·y∈dom(reg_users_profile)∧reg_users_profile(y)=PREMIUM∧x=f ∣ x ↦ y})&gt;1" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#]|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="addFile/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilk"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="backup_file{file ↦ FALSE}∈FILES ⇸ BOOL" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#g"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="backup_file{file ↦ FALSE}∈files∪{file} → BOOL" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#g"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#R"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#^"/>
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#g"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poSequent#addFile\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#HYPctxB|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="addFile/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poSequent name="addFile/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilk"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="backup_logs∈files∪{file} ↔ ℕ1" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#i"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#R"/>
@@ -153,7 +162,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poSequent#addFile\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#HYPctxB|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="addFile/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poSequent name="addFile/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilk"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀f⦂FILES,n⦂ℤ·f ↦ n∈backup_logs∧f∈dom(backup_file{file ↦ FALSE})⇒(backup_file{file ↦ FALSE})(f)=TRUE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#j"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#R"/>
@@ -162,7 +171,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poSequent#addFile\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilk" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilk" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="files'" org.eventb.core.type="ℙ(FILES)"/>
 <org.eventb.core.poIdentifier name="size" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="backup_file'" org.eventb.core.type="ℙ(FILES×BOOL)"/>
@@ -174,13 +183,22 @@
 <org.eventb.core.poIdentifier name="owner" org.eventb.core.type="USERS"/>
 <org.eventb.core.poIdentifier name="file_mode'" org.eventb.core.type="ℙ(FILES×MODES)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilk" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilk" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilk" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilk" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="file∈FILES" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#9|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="size∈ℕ" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#9|org.eventb.core.guard#+"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="owner∈reg_users" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#9|org.eventb.core.guard#,"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="file∉files" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#9|org.eventb.core.guard#1"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="removeFile/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poSequent name="removeFile/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="37">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profill"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{file} ⩤ backup_file∈files ∖ {file} → BOOL" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#g"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#S"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#_"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#g"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poSequent#removeFile\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#HYPctxB|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="removeFile/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="37">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profill"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{file} ⩤ backup_logs∈files ∖ {file} ↔ ℕ1" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#i"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#S"/>
@@ -189,20 +207,21 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poSequent#removeFile\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#HYPctxB|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="removeFile/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poSequent name="removeFile/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="37">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profill"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀f⦂FILES,n⦂ℤ·f ↦ n∈{file} ⩤ backup_logs∧f∈dom(backup_file)⇒backup_file(f)=TRUE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#j"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀f⦂FILES,n⦂ℤ·f ↦ n∈{file} ⩤ backup_logs∧f∈dom({file} ⩤ backup_file)⇒({file} ⩤ backup_file)(f)=TRUE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#j"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#S"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#_"/>
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#j"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poSequent#removeFile\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profill" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profill" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="37">
 <org.eventb.core.poIdentifier name="files'" org.eventb.core.type="ℙ(FILES)"/>
 <org.eventb.core.poIdentifier name="backup_logs'" org.eventb.core.type="ℙ(FILES×ℤ)"/>
 <org.eventb.core.poIdentifier name="file_archive'" org.eventb.core.type="ℙ(FILES×ℤ)"/>
 <org.eventb.core.poIdentifier name="usr" org.eventb.core.type="USERS"/>
+<org.eventb.core.poIdentifier name="backup_file'" org.eventb.core.type="ℙ(FILES×BOOL)"/>
 <org.eventb.core.poIdentifier name="file" org.eventb.core.type="FILES"/>
 <org.eventb.core.poIdentifier name="file_owner'" org.eventb.core.type="ℙ(FILES×USERS)"/>
 <org.eventb.core.poIdentifier name="file_local'" org.eventb.core.type="ℙ(FILES×(USERS×ℤ))"/>
@@ -210,7 +229,7 @@
 <org.eventb.core.poIdentifier name="file_size'" org.eventb.core.type="ℙ(FILES×ℤ)"/>
 <org.eventb.core.poIdentifier name="file_mode'" org.eventb.core.type="ℙ(FILES×MODES)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profill" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profill" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profill" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profill" org.eventb.core.poStamp="37">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usr∈reg_users" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#=|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="file∈files" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#=|org.eventb.core.guard#+"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="file∈dom(file_access)" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#S|org.eventb.core.guard#("/>
@@ -218,91 +237,115 @@
 <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="usr∈reg_users" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#S|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="∀f⦂FILES·f∈files∧file_mode(f)=READONLY⇒usr=file_owner(f)" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#S|org.eventb.core.guard#,"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilm" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="30">
+<org.eventb.core.poSequent name="uploadFile/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="44">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilmfilh"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="file∈dom(backup_file)∧backup_file∈FILES ⇸ BOOL" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#`|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#`|org.eventb.core.guard#("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilmfilh"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilm" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="usr" org.eventb.core.type="USERS"/>
 <org.eventb.core.poIdentifier name="file" org.eventb.core.type="FILES"/>
 <org.eventb.core.poIdentifier name="file_version'" org.eventb.core.type="ℙ(FILES×ℤ)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilm" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilm" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTHYPreg_users_profilmfilh" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilm" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="file∈files" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#@|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="file∈dom(file_local)" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#@|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ran({usr} ◁ file_local[{file}])={file_version(file)}" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#@|org.eventb.core.guard#,"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="usr∈file_access[{file}]" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#T|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="file_mode(file)=READONLY⇒usr=file_owner(file)" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#T|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profiln" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilm" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilmfilh" org.eventb.core.poStamp="44">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="backup_file(file)=FALSE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#`|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profiln" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="usr" org.eventb.core.type="USERS"/>
 <org.eventb.core.poIdentifier name="file" org.eventb.core.type="FILES"/>
 <org.eventb.core.poIdentifier name="file_local'" org.eventb.core.type="ℙ(FILES×(USERS×ℤ))"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profiln" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profiln" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profiln" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profiln" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="file∈files" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#A|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usr∈reg_users" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#A|org.eventb.core.guard#."/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usr∈file_access[{file}]" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#U|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilo" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilo" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="usr1" org.eventb.core.type="USERS"/>
 <org.eventb.core.poIdentifier name="file" org.eventb.core.type="FILES"/>
 <org.eventb.core.poIdentifier name="usr2" org.eventb.core.type="USERS"/>
 <org.eventb.core.poIdentifier name="file_access'" org.eventb.core.type="ℙ(FILES×USERS)"/>
 <org.eventb.core.poIdentifier name="file_local'" org.eventb.core.type="ℙ(FILES×(USERS×ℤ))"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilo" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilo" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilo" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilo" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="file∈files" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#Z|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usr1∈file_access[{file}]" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#Z|org.eventb.core.guard#+"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usr2∈reg_users" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#Z|org.eventb.core.guard#."/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="usr2∉file_access[{file}]" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#Z|org.eventb.core.guard#\/"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilp" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="30">
+<org.eventb.core.poSequent name="removeShare/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="50">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilp)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="file∈dom(backup_file)∧backup_file∈FILES ⇸ BOOL" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#c|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#c|org.eventb.core.guard#("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilp)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilp" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="usr1" org.eventb.core.type="USERS"/>
 <org.eventb.core.poIdentifier name="file" org.eventb.core.type="FILES"/>
 <org.eventb.core.poIdentifier name="usr2" org.eventb.core.type="USERS"/>
 <org.eventb.core.poIdentifier name="file_access'" org.eventb.core.type="ℙ(FILES×USERS)"/>
 <org.eventb.core.poIdentifier name="file_local'" org.eventb.core.type="ℙ(FILES×(USERS×ℤ))"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilp" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilp" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTHYPreg_users_profilp)" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilp" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="file∈files" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#[|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usr1∈file_access[{file}]" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#[|org.eventb.core.guard#+"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usr2≠file_owner(file)" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#[|org.eventb.core.guard#,"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilq" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilp" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilp)" org.eventb.core.poStamp="50">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="backup_file(file)=FALSE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#c|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilq" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="usr" org.eventb.core.type="USERS"/>
 <org.eventb.core.poIdentifier name="file" org.eventb.core.type="FILES"/>
 <org.eventb.core.poIdentifier name="mode" org.eventb.core.type="MODES"/>
 <org.eventb.core.poIdentifier name="file_mode'" org.eventb.core.type="ℙ(FILES×MODES)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilq" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilq" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilq" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilq" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="file∈files" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#\\|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usr=file_owner(file)" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#\\|org.eventb.core.guard#+"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="mode=SECURE" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#\\|org.eventb.core.guard#-"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀u⦂USERS·u∈file_access[{file}]⇒reg_users_profile(u)=PREMIUM" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#\\|org.eventb.core.guard#0"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilr" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilr" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="usr" org.eventb.core.type="USERS"/>
 <org.eventb.core.poIdentifier name="file" org.eventb.core.type="FILES"/>
 <org.eventb.core.poIdentifier name="mode" org.eventb.core.type="MODES"/>
 <org.eventb.core.poIdentifier name="file_mode'" org.eventb.core.type="ℙ(FILES×MODES)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilr" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilr" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilr" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilr" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="file∈files" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#_|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usr=file_owner(file)" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#_|org.eventb.core.guard#+"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="mode≠SECURE" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#_|org.eventb.core.guard#,"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="turnOnBU/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="30">
+<org.eventb.core.poSequent name="turnOnBU/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profils)"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂USERS·file ↦ x∈file_access∧x∈reg_users⇒x∈dom(reg_users_profile)∧reg_users_profile∈USERS ⇸ UTYPES" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#k|org.eventb.core.guard#-"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#k|org.eventb.core.guard#-"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profils)"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="turnOnBU/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poSequent name="turnOnBU/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="35">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profils*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="file∈dom(backup_file)∧backup_file∈FILES ⇸ BOOL" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#k|org.eventb.core.guard#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#k|org.eventb.core.guard#\/"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profils*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="turnOnBU/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profils"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="backup_file{file ↦ TRUE}∈FILES ⇸ BOOL" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#g"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="backup_file{file ↦ TRUE}∈files → BOOL" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#g"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#k"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#g"/>
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poSequent#turnOnBU\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#HYPctxB|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="turnOnBU/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poSequent name="turnOnBU/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profils"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀f⦂FILES,n⦂ℤ·f ↦ n∈backup_logs∧f∈dom(backup_file{file ↦ TRUE})⇒(backup_file{file ↦ TRUE})(f)=TRUE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#j"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#k"/>
@@ -310,28 +353,37 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poSequent#turnOnBU\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profils" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profils" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="usr" org.eventb.core.type="USERS"/>
 <org.eventb.core.poIdentifier name="backup_file'" org.eventb.core.type="ℙ(FILES×BOOL)"/>
 <org.eventb.core.poIdentifier name="file" org.eventb.core.type="FILES"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPreg_users_profils)" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profils" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTHYPreg_users_profils)" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profils" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="file∈files" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#k|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usr∈reg_users" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#k|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="file ↦ usr∈file_access" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#k|org.eventb.core.guard#+"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profils" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profils)" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTHYPreg_users_profils*" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profils)" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∃x⦂USERS·file ↦ x∈file_access∧x∈reg_users⇒reg_users_profile(x)=PREMIUM" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#k|org.eventb.core.guard#-"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="turnOffBU/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profils" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profils*" org.eventb.core.poStamp="35">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="backup_file(file)=FALSE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#k|org.eventb.core.guard#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="turnOffBU/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="38">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilt)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="file∈dom(backup_file)∧backup_file∈FILES ⇸ BOOL" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#l|org.eventb.core.guard#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#l|org.eventb.core.guard#."/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilt)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="turnOffBU/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="38">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilt"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="backup_file{file ↦ FALSE}∈FILES ⇸ BOOL" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#g"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="backup_file{file ↦ FALSE}∈files → BOOL" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#g"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#l"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#g"/>
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poSequent#turnOffBU\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#HYPctxB|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="turnOffBU/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poSequent name="turnOffBU/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="38">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilt"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{file} ⩤ backup_logs∈files ↔ ℕ1" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#i"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#l"/>
@@ -339,7 +391,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poSequent#turnOffBU\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#HYPctxB|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="turnOffBU/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poSequent name="turnOffBU/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="38">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilt"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀f⦂FILES,n⦂ℤ·f ↦ n∈{file} ⩤ backup_logs∧f∈dom(backup_file{file ↦ FALSE})⇒(backup_file{file ↦ FALSE})(f)=TRUE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#j"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#l"/>
@@ -347,31 +399,110 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poSequent#turnOffBU\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilt" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilt" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="backup_logs'" org.eventb.core.type="ℙ(FILES×ℤ)"/>
 <org.eventb.core.poIdentifier name="usr" org.eventb.core.type="USERS"/>
 <org.eventb.core.poIdentifier name="backup_file'" org.eventb.core.type="ℙ(FILES×BOOL)"/>
 <org.eventb.core.poIdentifier name="file" org.eventb.core.type="FILES"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilt" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilt" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTHYPreg_users_profilt)" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilt" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="file∈files" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#l|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usr∈reg_users" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#l|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="file ↦ usr∈file_access" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#l|org.eventb.core.guard#+"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilu" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilt" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilt)" org.eventb.core.poStamp="38">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="backup_file(file)=TRUE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#l|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilu" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="usr" org.eventb.core.type="USERS"/>
 <org.eventb.core.poIdentifier name="file" org.eventb.core.type="FILES"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilu" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilu" org.eventb.core.poStamp="30">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="file∈files" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#m|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilu" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilu" org.eventb.core.poStamp="43">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="file∈FILES" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#m|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usr∈reg_users" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#m|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="file ↦ usr∈file_access" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#m|org.eventb.core.guard#+"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPctxB" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="backup_file∈FILES ⇸ BOOL" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#g"/>
+<org.eventb.core.poSequent name="uploadFileWithBackup/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="49">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilvfilh"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="file∈dom(backup_file)∧backup_file∈FILES ⇸ BOOL" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#n|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#n|org.eventb.core.guard#("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilvfilh"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="uploadFileWithBackup/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="49">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="backup_logs∪{file ↦ file_version(file)+1}∈files ↔ ℕ1" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#i"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#T"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#n"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#i"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poSequent#uploadFileWithBackup\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#HYPctxB|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="uploadFileWithBackup/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="49">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀f⦂FILES,n⦂ℤ·f ↦ n∈backup_logs∪{file ↦ file_version(file)+1}∧f∈dom(backup_file)⇒backup_file(f)=TRUE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#j"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#T"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#n"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#j"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poSequent#uploadFileWithBackup\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="uploadFileWithBackup/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="49">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="file∈dom(file_version)∧file_version∈FILES ⇸ ℤ" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#n|org.eventb.core.action#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#n|org.eventb.core.action#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilv"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilv" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="49">
+<org.eventb.core.poIdentifier name="backup_logs'" org.eventb.core.type="ℙ(FILES×ℤ)"/>
+<org.eventb.core.poIdentifier name="usr" org.eventb.core.type="USERS"/>
+<org.eventb.core.poIdentifier name="file" org.eventb.core.type="FILES"/>
+<org.eventb.core.poIdentifier name="file_version'" org.eventb.core.type="ℙ(FILES×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreg_users_profilvfilh" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilv" org.eventb.core.poStamp="49">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="file∈files" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#@|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="file∈dom(file_local)" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#@|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ran({usr} ◁ file_local[{file}])={file_version(file)}" org.eventb.core.source="/PROJECT_1/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#@|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="usr∈file_access[{file}]" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#T|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="file_mode(file)=READONLY⇒usr=file_owner(file)" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#T|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilv" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilvfilh" org.eventb.core.poStamp="49">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="backup_file(file)=TRUE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#n|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="removeShareWithBackup/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilw)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="file∈dom(backup_file)∧backup_file∈FILES ⇸ BOOL" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#o|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#o|org.eventb.core.guard#("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilw)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="removeShareWithBackup/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="56">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilwusr5"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀u⦂USERS·u∈reg_users∧u≠usr2∧u∈file_access[{file}]⇒u∈dom(reg_users_profile)∧reg_users_profile∈USERS ⇸ UTYPES" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#o|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#o|org.eventb.core.guard#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilwusr5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilw" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="usr1" org.eventb.core.type="USERS"/>
+<org.eventb.core.poIdentifier name="file" org.eventb.core.type="FILES"/>
+<org.eventb.core.poIdentifier name="usr2" org.eventb.core.type="USERS"/>
+<org.eventb.core.poIdentifier name="file_access'" org.eventb.core.type="ℙ(FILES×USERS)"/>
+<org.eventb.core.poIdentifier name="file_local'" org.eventb.core.type="ℙ(FILES×(USERS×ℤ))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreg_users_profilw)" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilw" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="file∈files" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#[|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usr1∈file_access[{file}]" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#[|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usr2≠file_owner(file)" org.eventb.core.source="/PROJECT_1/mac_shares.bum|org.eventb.core.machineFile#mac_shares|org.eventb.core.event#[|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreg_users_profilwusr5" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilw)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="backup_file(file)=TRUE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#o|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilw" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilwusr5" org.eventb.core.poStamp="56">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∃u⦂USERS·u∈reg_users∧u≠usr2∧u∈file_access[{file}]∧reg_users_profile(u)=PREMIUM" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.event#o|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPctxB" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="35">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="backup_file∈files → BOOL" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#g"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="backup_logs∈files ↔ ℕ1" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#i"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#HYPctxB" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/PROJECT_1/mac_backups.bpo|org.eventb.core.poFile#mac_backups|org.eventb.core.poPredicateSet#HYPctxB" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀f⦂FILES,n⦂ℤ·f ↦ n∈backup_logs∧f∈dom(backup_file)⇒backup_file(f)=TRUE" org.eventb.core.source="/PROJECT_1/mac_backups.bum|org.eventb.core.machineFile#mac_backups|org.eventb.core.invariant#j"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
