@@ -28,7 +28,7 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="]" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="downgradeBasic">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="downgradeBasic"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="∃f·(f∈dom(backup_file) ∧ backup_file(f) = TRUE ∧ usr∈file_access[{f}]) ⇒ card(file_access ∖ {x↦y ∣ y∈dom(reg_users_profile) ∧ reg_users_profile(y)=PREMIUM ∧ x=f})&gt;1 "/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="∃f·(f∈dom(backup_file) ∧ backup_file(f) = TRUE ∧ usr∈file_access[{f}]) ⇒ (∃k,m·(k=f ∧ m∈dom(reg_users_profile) ∧ reg_users_profile(m)=PREMIUM ∧ (k↦m)∈(file_access ∖ {x↦y ∣ y∈dom(reg_users_profile) ∧ reg_users_profile(y)=PREMIUM ∧ x=f})))"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="^" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="addFile">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="addFile"/>
@@ -46,12 +46,12 @@
 <org.eventb.core.event name="a" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="downloadFile">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="downloadFile"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="b" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="shareFile">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="shareFile"/>
+<org.eventb.core.event name="b" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="shareFileNonSecure">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="shareFileNonSecure"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="c" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="removeShare">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="removeShare"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="backup_file(file) = FALSE"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="backup_file(file) = FALSE"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="d" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="changeSharingMode">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="changeSharingMode"/>
@@ -98,7 +98,10 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="o" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="removeShareWithBackup">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="removeShare"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="backup_file(file) = TRUE"/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd5" org.eventb.core.predicate="∃u·(u∈reg_users ∧ u≠usr2 ∧ u∈file_access[{file}] ∧ reg_users_profile(u)=PREMIUM)"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd6" org.eventb.core.predicate="backup_file(file) = TRUE"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd7" org.eventb.core.predicate="∃u·(u∈reg_users ∧ u≠usr2 ∧ u∈file_access[{file}] ∧ reg_users_profile(u)=PREMIUM)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="p" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="shareFileSecure">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="shareFileSecure"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

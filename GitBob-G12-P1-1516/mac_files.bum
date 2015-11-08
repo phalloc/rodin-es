@@ -57,7 +57,7 @@
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="file"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="usr"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="usr ∈ reg_users"/>
-<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="file ∈ files"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="file ∈ dom(file_local)"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="files ≔ files ∖ {file}" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="-" org.eventb.core.assignment="file_size ≔ {file} ⩤ file_size" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="." org.eventb.core.assignment="file_owner ≔ {file} ⩤ file_owner" org.eventb.core.label="act3"/>
@@ -84,4 +84,11 @@
 <org.eventb.core.invariant name="C" org.eventb.core.label="inv7" org.eventb.core.predicate="file_archive ∈ FILES ⇸ ℕ1"/>
 <org.eventb.core.variable name="I" org.eventb.core.identifier="file_local"/>
 <org.eventb.core.invariant name="J" org.eventb.core.label="inv10" org.eventb.core.predicate="file_local ∈ files ↔ reg_users × ℕ1"/>
+<org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="removeUserLocalFile">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="file"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="usr"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="file ∈ files"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="usr ∈ reg_users"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="file_local ≔ file_local ∖ {x↦(y↦z) ∣ y=usr ∧ x=file}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
 </org.eventb.core.machineFile>

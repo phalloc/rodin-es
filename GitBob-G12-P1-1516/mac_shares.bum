@@ -53,10 +53,10 @@
 <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="usr ∈ file_access[{file}]"/>
 </org.eventb.core.event>
 <org.eventb.core.invariant name="V" org.eventb.core.label="inv1" org.eventb.core.predicate="file_access ∈ FILES ↔ reg_users"/>
-<org.eventb.core.invariant name="W" org.eventb.core.label="inv2" org.eventb.core.predicate="∀x·(x∈dom(file_owner)) ⇒ (∃y·(file_owner(x)=y ∧ y ∈ ran(file_access)))"/>
+<org.eventb.core.invariant name="W" org.eventb.core.label="inv2" org.eventb.core.predicate="∀f·(f∈dom(file_owner)) ⇒ (∃u·(file_owner(f)=u ∧ u ∈ file_access[{f}]))"/>
 <org.eventb.core.variable name="X" org.eventb.core.identifier="file_mode"/>
 <org.eventb.core.invariant name="Y" org.eventb.core.label="inv3" org.eventb.core.predicate="file_mode ∈ files → MODES"/>
-<org.eventb.core.event name="Z" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="shareFile">
+<org.eventb.core.event name="Z" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="shareFileNonSecure">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="file"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="usr1"/>
 <org.eventb.core.parameter name=")" org.eventb.core.identifier="usr2"/>
@@ -66,16 +66,22 @@
 <org.eventb.core.action name="-" org.eventb.core.assignment="file_local ≔ file_local ∪ {file ↦ (usr2 ↦ file_version(file))}" org.eventb.core.label="act2"/>
 <org.eventb.core.guard name="." org.eventb.core.label="grd3" org.eventb.core.predicate="usr2 ∈ reg_users"/>
 <org.eventb.core.guard name="/" org.eventb.core.label="grd4" org.eventb.core.predicate="usr2 ∉ file_access[{file}]"/>
+<org.eventb.core.refinesEvent name="0" org.eventb.core.target="downloadFile"/>
+<org.eventb.core.witness name="1" org.eventb.core.label="usr" org.eventb.core.predicate="usr = usr2"/>
+<org.eventb.core.guard name="2" org.eventb.core.label="grd5" org.eventb.core.predicate="file_mode(file) ≠ SECURE"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="[" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="removeShare">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="file"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="usr1"/>
 <org.eventb.core.parameter name=")" org.eventb.core.identifier="usr2"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="file ∈ files"/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="usr1 ∈ file_access[{file}]"/>
-<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="usr2 ≠ file_owner(file)"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="file ∈ files"/>
 <org.eventb.core.action name="-" org.eventb.core.assignment="file_access ≔ file_access ∖ {file ↦ usr2}" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="." org.eventb.core.assignment="file_local ≔ file_local ∖ {x↦(y↦z) ∣ y=usr2 ∧ x=file}" org.eventb.core.label="act2"/>
+<org.eventb.core.refinesEvent name="/" org.eventb.core.target="removeUserLocalFile"/>
+<org.eventb.core.witness name="0" org.eventb.core.label="usr" org.eventb.core.predicate="usr = usr2"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd4" org.eventb.core.predicate="usr2 ∈ reg_users"/>
+<org.eventb.core.guard name="2" org.eventb.core.label="grd5" org.eventb.core.predicate="usr2 ≠ file_owner(file)"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="\" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="changeSharingMode">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="file"/>
@@ -87,7 +93,7 @@
 <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="mode = SECURE"/>
 <org.eventb.core.guard name="0" org.eventb.core.label="grd4" org.eventb.core.predicate="∀u·(u ∈ file_access[{file}]) ⇒ reg_users_profile(u) = PREMIUM "/>
 </org.eventb.core.event>
-<org.eventb.core.invariant name="^" org.eventb.core.label="inv5" org.eventb.core.predicate="∀f,u,n·(f∈dom(file_local) ∧ u↦n ∈ file_local[{f}]) ⇒ n ≤ file_version(f) "/>
+<org.eventb.core.invariant name="^" org.eventb.core.label="inv5" org.eventb.core.predicate="∀f,u,n·(f∈dom(file_version) ∧ f∈dom(file_local) ∧ u↦n ∈ file_local[{f}]) ⇒ n ≤ file_version(f) "/>
 <org.eventb.core.event name="_" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="changeSharingMode2">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="file"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="usr"/>
@@ -97,5 +103,20 @@
 <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="mode ≠ SECURE"/>
 <org.eventb.core.action name="-" org.eventb.core.assignment="file_mode(file) ≔ mode" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
-<org.eventb.core.invariant name="`" org.eventb.core.label="inv6" org.eventb.core.predicate="∀f,u·(f∈dom(file_mode) ∧ u∈file_access[{f}] ∧ file_mode(f)=SECURE) ⇒ reg_users_profile(u) = PREMIUM"/>
+<org.eventb.core.invariant name="`" org.eventb.core.label="inv6" org.eventb.core.predicate="∀f,u·(u∈dom(reg_users_profile) ∧f∈dom(file_mode) ∧ u∈file_access[{f}] ∧ file_mode(f)=SECURE) ⇒ reg_users_profile(u) = PREMIUM"/>
+<org.eventb.core.event name="a" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="shareFileSecure">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="downloadFile"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="file"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="usr1"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="usr2"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="file ∈ files"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="usr1 ∈ file_access[{file}]"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="usr2 ∈ reg_users"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="usr2 ∉ file_access[{file}]"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="file_mode(file)=SECURE"/>
+<org.eventb.core.witness name="0" org.eventb.core.label="usr" org.eventb.core.predicate="usr = usr2"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd6" org.eventb.core.predicate="reg_users_profile(usr2)=PREMIUM"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="file_access ≔ file_access ∪ {file ↦ usr2}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="3" org.eventb.core.assignment="file_local ≔ file_local ∪ {file ↦ (usr2 ↦ file_version(file))}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
 </org.eventb.core.machineFile>

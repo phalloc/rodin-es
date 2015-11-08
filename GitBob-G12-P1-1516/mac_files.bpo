@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poFile org.eventb.core.poStamp="9">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="FILES" org.eventb.core.type="ℙ(FILES)"/>
 <org.eventb.core.poIdentifier name="MODES" org.eventb.core.type="ℙ(MODES)"/>
@@ -209,7 +209,7 @@
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="owner∈reg_users" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#9|org.eventb.core.guard#,"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="file∉files" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#9|org.eventb.core.guard#1"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="removeFile/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="removeFile/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profill"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{file} ⩤ file_size∈files ∖ {file} → ℕ" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.invariant#6"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#="/>
@@ -217,7 +217,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poSequent#removeFile\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="removeFile/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="removeFile/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profill"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{file} ⩤ file_owner∈files ∖ {file} → reg_users" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.invariant#7"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#="/>
@@ -225,7 +225,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poSequent#removeFile\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="removeFile/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="removeFile/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profill"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{file} ⩤ file_version∈files ∖ {file} → ℕ1" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.invariant#8"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#="/>
@@ -233,7 +233,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poSequent#removeFile\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="removeFile/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="removeFile/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profill"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="file_archive{file ↦ file_version(file)}∈FILES ⇸ ℕ1" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.invariant#C"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#="/>
@@ -241,7 +241,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poSequent#removeFile\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="removeFile/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="removeFile/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="6">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profill"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{file} ⩤ file_local∈files ∖ {file} ↔ reg_users × ℕ1" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.invariant#J"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#="/>
@@ -249,7 +249,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poSequent#removeFile\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="removeFile/act7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="removeFile/act7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="6">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profill"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="file∈dom(file_version)∧file_version∈FILES ⇸ ℤ" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#=|org.eventb.core.action#2"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#=|org.eventb.core.action#2"/>
@@ -265,9 +265,9 @@
 <org.eventb.core.poIdentifier name="file_version'" org.eventb.core.type="ℙ(FILES×ℤ)"/>
 <org.eventb.core.poIdentifier name="file_size'" org.eventb.core.type="ℙ(FILES×ℤ)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profill" org.eventb.core.parentSet="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profill" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profill" org.eventb.core.parentSet="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profill" org.eventb.core.poStamp="4">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usr∈reg_users" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#=|org.eventb.core.guard#)"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="file∈files" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#=|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="file∈dom(file_local)" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#=|org.eventb.core.guard#+"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poSequent name="uploadFile/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTHYPreg_users_profilm("/>
@@ -323,6 +323,23 @@
 <org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profiln" org.eventb.core.parentSet="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profiln" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="file∈files" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#A|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usr∈reg_users" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#A|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="removeUserLocalFile/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTALLHYPreg_users_profilo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="file_local ∖ {x⦂FILES,y⦂USERS,z⦂ℤ·y=usr∧x=file ∣ x ↦ (y ↦ z)}∈files ↔ reg_users × ℕ1" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.invariant#J"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#K"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.invariant#J"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poSequent#removeUserLocalFile\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreg_users_profilo" org.eventb.core.parentSet="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="7">
+<org.eventb.core.poIdentifier name="usr" org.eventb.core.type="USERS"/>
+<org.eventb.core.poIdentifier name="file" org.eventb.core.type="FILES"/>
+<org.eventb.core.poIdentifier name="file_local'" org.eventb.core.type="ℙ(FILES×(USERS×ℤ))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreg_users_profilo" org.eventb.core.parentSet="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#EVTIDENTreg_users_profilo" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="file∈files" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#K|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usr∈reg_users" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.event#K|org.eventb.core.guard#*"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/GitBob-G12-P1-1516/mac_files.bpo|org.eventb.core.poFile#mac_files|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="files⊆FILES" org.eventb.core.source="/GitBob-G12-P1-1516/mac_files.bum|org.eventb.core.machineFile#mac_files|org.eventb.core.invariant#5"/>
