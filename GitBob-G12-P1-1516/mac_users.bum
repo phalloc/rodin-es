@@ -1,46 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.machineFile org.eventb.core.comment="The Abstract Machine" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
 <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
-<org.eventb.core.action name="'" org.eventb.core.assignment="reg_users ≔ ∅" org.eventb.core.label="act1"/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="reg_users_profile ≔ ∅" org.eventb.core.label="act2"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="reg_users_email ≔ ∅" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="reg_users ≔ ∅" org.eventb.core.comment="Req. 4" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="reg_users_profile ≔ ∅" org.eventb.core.comment="Req. 4" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="reg_users_email ≔ ∅" org.eventb.core.comment="Req. 4" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
 <org.eventb.core.seesContext name="(" org.eventb.core.target="ctx1"/>
 <org.eventb.core.variable name=")" org.eventb.core.identifier="reg_users"/>
 <org.eventb.core.variable name="*" org.eventb.core.identifier="reg_users_profile"/>
 <org.eventb.core.variable name="+" org.eventb.core.identifier="reg_users_email"/>
-<org.eventb.core.invariant name="," org.eventb.core.label="inv1" org.eventb.core.predicate="reg_users ⊆ USERS"/>
-<org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="reg_users_profile ∈ reg_users → UTYPES"/>
-<org.eventb.core.invariant name="." org.eventb.core.label="inv3" org.eventb.core.predicate="reg_users_email ∈ reg_users → UEMAILS"/>
+<org.eventb.core.invariant name="," org.eventb.core.comment="Req. 1" org.eventb.core.label="inv1" org.eventb.core.predicate="reg_users ⊆ USERS"/>
+<org.eventb.core.invariant name="-" org.eventb.core.comment="Req. 2" org.eventb.core.label="inv2" org.eventb.core.predicate="reg_users_profile ∈ reg_users → UTYPES"/>
+<org.eventb.core.invariant name="." org.eventb.core.comment="Req. 2" org.eventb.core.label="inv3" org.eventb.core.predicate="reg_users_email ∈ reg_users → UEMAILS"/>
 <org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="newUser">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="usr"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="type"/>
 <org.eventb.core.parameter name=")" org.eventb.core.identifier="mail"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="usr ∈ USERS"/>
-<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="type ∈ UTYPES"/>
-<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="mail ∈ UEMAILS"/>
-<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="usr ∉ reg_users"/>
-<org.eventb.core.action name="." org.eventb.core.assignment="reg_users ≔ reg_users  ∪ {usr}" org.eventb.core.label="act1"/>
-<org.eventb.core.action name="/" org.eventb.core.assignment="reg_users_profile(usr) ≔ type" org.eventb.core.label="act2"/>
-<org.eventb.core.action name="0" org.eventb.core.assignment="reg_users_email(usr) ≔ mail" org.eventb.core.label="act3"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="Req. 1" org.eventb.core.label="grd1" org.eventb.core.predicate="usr ∈ USERS"/>
+<org.eventb.core.guard name="+" org.eventb.core.comment="Req. 2" org.eventb.core.label="grd2" org.eventb.core.predicate="type ∈ UTYPES"/>
+<org.eventb.core.guard name="," org.eventb.core.comment="Req. 2" org.eventb.core.label="grd3" org.eventb.core.predicate="mail ∈ UEMAILS"/>
+<org.eventb.core.guard name="-" org.eventb.core.comment="Req. 5" org.eventb.core.label="grd4" org.eventb.core.predicate="usr ∉ reg_users"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="reg_users ≔ reg_users  ∪ {usr}" org.eventb.core.comment="Operation newUser objective" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="reg_users_profile(usr) ≔ type" org.eventb.core.comment="Req. 2" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="reg_users_email(usr) ≔ mail" org.eventb.core.comment="Req. 2" org.eventb.core.label="act3"/>
+<org.eventb.core.guard name="1" org.eventb.core.comment="Req. 3" org.eventb.core.label="grd5" org.eventb.core.predicate="mail ∉ ran(reg_users_email)"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="removeUser">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="usr"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="usr ∈ reg_users"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="reg_users ≔ reg_users ∖ {usr}" org.eventb.core.label="act1"/>
-<org.eventb.core.action name="*" org.eventb.core.assignment="reg_users_profile ≔ {usr} ⩤ reg_users_profile" org.eventb.core.label="act2"/>
-<org.eventb.core.action name="+" org.eventb.core.assignment="reg_users_email ≔ {usr} ⩤ reg_users_email" org.eventb.core.label="act3"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="Req. 6" org.eventb.core.label="grd1" org.eventb.core.predicate="usr ∈ reg_users"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="reg_users ≔ reg_users ∖ {usr}" org.eventb.core.comment="Operation removeUser objective" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="reg_users_profile ≔ {usr} ⩤ reg_users_profile" org.eventb.core.comment="Req. 2&#9;" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="reg_users_email ≔ {usr} ⩤ reg_users_email" org.eventb.core.comment="Req. 2" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="upgradePremium">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="usr"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="usr ∈ reg_users"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="reg_users_profile(usr) ≔ PREMIUM" org.eventb.core.label="act1"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="reg_users_profile(usr) = BASIC"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="Req. 7" org.eventb.core.label="grd1" org.eventb.core.predicate="usr ∈ reg_users"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="reg_users_profile(usr) ≔ PREMIUM" org.eventb.core.comment="Operation upgradePremium objective" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="Req. 9" org.eventb.core.label="grd2" org.eventb.core.predicate="reg_users_profile(usr) = BASIC"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="downgradeBasic">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="usr"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="usr ∈ reg_users"/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="reg_users_profile(usr) = PREMIUM"/>
-<org.eventb.core.action name="*" org.eventb.core.assignment="reg_users_profile(usr) ≔ BASIC" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="Req. 8" org.eventb.core.label="grd1" org.eventb.core.predicate="usr ∈ reg_users"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="Req. 9" org.eventb.core.label="grd2" org.eventb.core.predicate="reg_users_profile(usr) = PREMIUM"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="reg_users_profile(usr) ≔ BASIC" org.eventb.core.comment="Operation downgradeBasic objective" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
+<org.eventb.core.invariant name="3" org.eventb.core.comment="Req. 3" org.eventb.core.label="inv4" org.eventb.core.predicate="∀u1,u2·(u1 ≠ u2 ∧ u1∈reg_users ∧ u2∈reg_users) ⇒ reg_users_email(u1)≠reg_users_email(u2)"/>
 </org.eventb.core.machineFile>

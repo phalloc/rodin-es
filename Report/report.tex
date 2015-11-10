@@ -28,7 +28,7 @@
 \usepackage{amsmath,amsfonts,amsthm} % Math packages
 
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
-
+\usepackage{multicol}
 \usepackage{sectsty} % Allows customizing section commands
 \allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
 
@@ -89,6 +89,7 @@ Given the operations and restrictions presented in the project statement the gro
 
 \section{Interactive Prover}
 The following profs were not automatically proved and required the group intervention
+\begin{multicols}{2}
 \begin{itemize}
 	\item[\textbf{Machine mac\_files}] uploadFile/inv4/INV
 	\item[\textbf{Machine mac\_shares}] addFile/inv2/INV
@@ -96,6 +97,9 @@ The following profs were not automatically proved and required the group interve
 	\item[\textbf{Machine mac\_shares}] uploadFile/inv5/INV
 	\item[\textbf{Machine mac\_backups}] uploadFileWithBackup/inv2/INV
 	\item[\textbf{Machine mac\_backups}] addFile/inv3/INV
+	\item[\textbf{Machine mac\_backups}] uploadFileWithBackup/inv2/INV
+	\item[]
 \end{itemize}
+\end{multicols}
 
 \end{document}
