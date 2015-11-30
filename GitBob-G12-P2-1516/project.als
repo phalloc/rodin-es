@@ -4,8 +4,6 @@
 //GITBOB
 one sig GitBob{
  users: set Reg_User
-}{
- no disj u1,u2 : users | u1 = u2
 }
 
 //REG_USERS
@@ -14,6 +12,7 @@ id: one User,
 type:  one Utypes,
 email : one Uemails
 }
+ 
 // -------------------------------------- //
 
 //USERS
@@ -40,7 +39,7 @@ sig Regular, Securely, Readonly extends Modes{}
 
 //FUNCTION newUser
 pred newUser [gb, gb' : GitBob, usr:User, newtype:Utypes, newemail:Uemails] {
- no u:gb.users | u.id = usr
+ no u:gb.users | u.id = usr or u.email = newemail
  gb'.users = gb.users + { user:Reg_User | user.id = usr && user.type = newtype && user.email = newemail} 
 }
 
@@ -64,8 +63,12 @@ pred downgradeBasic [gb, gb' : GitBob, usr:User]{
 //RESTRICTION 2
 
 //RESTRICTION 3
-fact unique_emails {
- all disj e1,e2 : Reg_User.email | e1 != e2 
+//fact unique_emails {
+// all disj e1,e2 : Reg_User | e1.email != e2.email 
+//}
+
+fact bam{
+ all gb: GitBob | #gb.users = 3
 }
 
 //RESTRICTION 4
@@ -73,7 +76,7 @@ pred init [gb : GitBob] { no gb.users }
 
 pred show {}
 run init
-run newUser for  10 User, 10 Reg_User, 10 Uemails, 0 Modes
+run newUser for  4 but 0 Modes
 //run upgradePremium
 //run downgradeBasic 
 
