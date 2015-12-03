@@ -96,22 +96,31 @@ pred downloadFile[gb, gb' : GitBob, file:File, u:Reg_User]{
    some f:gb.files | f.id = file and f.owner = u
    gb'.users = gb.users
 }
-
-
-
-
- 
-	
-//RESTRICTION 3
-//fact unique_emails {
-// all disj e1,e2 : Reg_User | e1.email != e2.email 
-//}
-
+// ------------------------------------- //
 
 /*
 fact bam{
  all gb: GitBob | #gb.users >= 1
 }*/
+
+//RESTRICTION 2
+assert ru_type_email {
+	all x:Reg_User | one x.type && one x.email
+} 
+//check ru_type_email 
+
+//RESTRICTION 3
+fact uniqueEmails{
+	all disj e1,e2 : Reg_User | e1.email != e2.email 
+}
+ 
+//RESTRICTION 4
+pred init [gb : GitBob] { no gb.users }
+
+//RESTRICTION 5
+assert registration {}
+
+//check registration
 
 fact traces{
  all gb: GitBob - last | let gb' = gb.next |
@@ -123,10 +132,6 @@ fact traces{
          addFile[gb, gb', f, s, ru] or
          removeFile[gb, gb', f, ru]
 }
-
-
-//RESTRICTION 4
-pred init [gb : GitBob] { no gb.users }
 
 pred show {}
 run init
