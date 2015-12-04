@@ -94,8 +94,8 @@ pred addFile[gb, gb' : GitBob, f:Reg_File, s:Int, own:Reg_User]{
 pred removeFile[gb, gb' : GitBob, f:Reg_File, u:Reg_User]{
    some file:gb.files | file = f // restriction 18
    u in gb.shares[f]
-   gb.modes[f]=Readonly and f.owner = u and gb'.files = gb.files - {file:gb.files | file= f} //restriction 33
-   gb.modes[f] != Readonly and gb'.files = gb.files - {file:gb.files | file= f}
+   gb.modes[f]=Readonly and f.owner = u implies gb'.files = gb.files - {file:gb.files | file= f} //restriction 33
+   gb.modes[f] != Readonly implies  gb'.files = gb.files - {file:gb.files | file= f}
    gb'.users = gb.users
    gb'.modes = gb.modes
 }
@@ -194,13 +194,6 @@ run torun for 5 but 0 Modes
 //run addFile for 3 but 0 Modes
 //run removeFile for 10 but 0 Modes
 //run uploadFile for 3 but 0 Modes 
-
-
-/*
-fact bam{
- all gb: GitBob | #gb.users >= 1
-}*/
- 
 
 
 

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view nodetheme="Martha">
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="Basic"/>
+   <type name="Int"/>
+   <type name="Premium"/>
+   <type name="Readonly"/>
+   <type name="Regular"/>
+   <type name="Secure"/>
+   <type name="String"/>
+   <type name="univ"/>
+   <type name="seq/Int"/>
+   <set name="$init_gb" type="GitBob"/>
+</node>
+
+<node shape="Ellipse" color="Green">
+   <type name="GitBob"/>
+</node>
+
+<node shape="Ellipse" color="Yellow">
+   <type name="File"/>
+</node>
+
+<node shape="Inv Triangle" color="Red">
+   <type name="Uemails"/>
+</node>
+
+<node shape="Lined Diamond" color="Gray">
+   <type name="User"/>
+</node>
+
+<node shape="Trapezoid" color="Blue">
+   <type name="Reg_User"/>
+</node>
+
+<node shape="Triangle" color="Red">
+   <type name="Reg_File"/>
+</node>
+
+<node visible="no">
+   <type name="Modes"/>
+   <type name="Utypes"/>
+   <type name="ordering/Ord"/>
+</node>
+
+<edge color="Gray" visible="no" attribute="yes" constraint="no">
+   <relation name="type"> <type name="Reg_User"/> <type name="Utypes"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes">
+   <relation name="email"> <type name="Reg_User"/> <type name="Uemails"/> </relation>
+   <relation name="files"> <type name="GitBob"/> <type name="Reg_File"/> </relation>
+   <relation name="id"> <type name="Reg_File"/> <type name="File"/> </relation>
+   <relation name="id"> <type name="Reg_User"/> <type name="User"/> </relation>
+   <relation name="modes"> <type name="GitBob"/> <type name="Reg_File"/> <type name="Modes"/> </relation>
+   <relation name="owner"> <type name="Reg_File"/> <type name="Reg_User"/> </relation>
+   <relation name="shares"> <type name="GitBob"/> <type name="Reg_File"/> <type name="Reg_User"/> </relation>
+   <relation name="size"> <type name="Reg_File"/> <type name="Int"/> </relation>
+   <relation name="users"> <type name="GitBob"/> <type name="Reg_User"/> </relation>
+   <relation name="version"> <type name="Reg_File"/> <type name="Int"/> </relation>
+</edge>
+
+</view>
+
+</alloy>
