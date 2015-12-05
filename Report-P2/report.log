@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=latex 2015.10.2)  8 NOV 2015 20:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.27)  5 DEC 2015 02:25
 entering extended mode
 **report.tex
 (report.tex
@@ -92,7 +92,7 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
@@ -842,9 +842,9 @@ LaTeX Font Info:    Try loading font information for T1+futs on input line 75.
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 )
 *geometry* driver: auto-detecting
-*geometry* detected driver: dvips
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: dvips
+* driver: pdftex
 * paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -931,14 +931,24 @@ Overfull \hbox (0.66422pt too wide) in paragraph at lines 100--101
 [1
 
 
-] (report.aux) ) 
+{C:/Users/Tiago Diogo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(report.aux) ) 
 Here is how much of TeX's memory you used:
- 5528 strings out of 493674
- 79852 string characters out of 3143966
- 307947 words of memory out of 3000000
+ 5541 strings out of 493673
+ 79969 string characters out of 3143940
+ 307882 words of memory out of 3000000
  8778 multiletter control sequences out of 15000+200000
- 60625 words of font info for 58 fonts, out of 3000000 for 9000
+ 63190 words of font info for 70 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  41i,10n,47p,539b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/
+Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<C:/Program F
+iles/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/cm-super/sftt1440.pfb>
+Output written on report.pdf (1 page, 56917 bytes).
+PDF statistics:
+ 20 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on report.dvi (1 page, 4364 bytes).
