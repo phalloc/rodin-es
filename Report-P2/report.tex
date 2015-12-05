@@ -43,6 +43,7 @@
 \setlength{\headheight}{13.6pt} % Customize the height of the header
 \usepackage{enumitem}
 \setlist{leftmargin=35mm}
+\usepackage{graphicx}
 
 \numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
 \numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
@@ -79,13 +80,54 @@
 \section{Project Approach}
 Given the operations and restrictions presented in the project statement the group decided to use a hierarchical approach, where each machine would be responsible for a specific group of operations and restrictions. This allows the use of a refinement process where each machine considers a single dimension and is then refined and expanded with the operations and restrictions of the next dimension. The used machines are explained in the following section, ordered by the refining sequence (each item refines the previous).
 
-\section{Developed Machines and Context}
-\begin{itemize}
-	\item[\textbf{Machine mac\_users}]The abstract model. In this machine we addressed the management of the users. The static part (SETS and AXIOMS defining the use of the CONSTANTS for the finite sets) was developed in Context ctx1. The state was modelled with 3 variables representing the USERS and their properties. The machine is responsible for the 4 user management operations and respects the restrictions [1-9]
-	\item[\textbf{Machine mac\_files}]The mac\_users refinement. In this machine we addressed the file management section. The state was modelled with 7 variables representing the FILES, their properties as well as the local versions and archive capabilities. The machine is responsible for the 4 file management operations and respects the restrictions [10-19,38]
-	\item[\textbf{Machine mac\_shares}]The mac\_files refinement. In this machine we addressed the sharing functionality. The state was modelled with 2 variable representing the sharing MODE and the USERS with access. This machine is responsible for the 3 file sharing operations and respects the restrictions [20-37]
-	\item[\textbf{Machine mac\_backups}]The mac\_shares refinement and final machine (GitBob). In this machine we addressed the backup and restore capabilities. The state was modelled with 2 variables that kept record of the files being backed up and their log history. The machine is responsible for the 3 backup and restore operations and respects the restrictions[39-50]
-\end{itemize}
+\section{Signatures Modeling and Explanation}
+
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}[b]{0.25\textwidth}
+    \includegraphics[width=\textwidth]{sig_reg_user.png}
+    \caption{Flower one.}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{sig_reg_file.png}
+    \caption{Flower two.}
+  \end{minipage}
+  \hfill
+   \begin{minipage}[b]{0.35\textwidth}
+    \includegraphics[width=\textwidth]{sig_gitbob.png}
+    \caption{Flower one.}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.2\textwidth}
+    \includegraphics[width=\textwidth]{sig_types.png}
+    \caption{Flower two.}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.35\textwidth}
+    \includegraphics[width=\textwidth]{sig_modes.png}
+    \caption{Flower two.}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}[b]{0.35\textwidth}
+    \includegraphics[width=\textwidth]{sig_gitbob.png}
+    \caption{Flower one.}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.2\textwidth}
+    \includegraphics[width=\textwidth]{sig_types.png}
+    \caption{Flower two.}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.35\textwidth}
+    \includegraphics[width=\textwidth]{sig_modes.png}
+    \caption{Flower two.}
+  \end{minipage}
+\end{figure}
 
 \section{Interactive Prover}
 The following profs were not automatically proved and required the group intervention
