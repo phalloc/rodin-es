@@ -94,9 +94,7 @@ pred addFile[gb, gb' : GitBob, f:Reg_File, s:Int, own:Reg_User]{
 pred removeFile[gb, gb' : GitBob, f:Reg_File, u:Reg_User]{
    some file:gb.files | file = f // restriction 18
    u in gb.shares[f]
-
-   gb'.files = gb.files - {file:gb.files | file= f}  => (u = f.owner and gb.modes[f]=Readonly) else (gb.modes[f]!=Readonly)
-
+   (u = f.owner and gb.modes[f]=Readonly) => gb'.files = gb.files - f else gb'.files=gb.files
    //gb.modes[f]=Readonly and f.owner = u implies gb'.files = gb.files - {file:gb.files | file= f} //restriction 33
    //gb.modes[f] != Readonly implies  gb'.files = gb.files - {file:gb.files | file= f}
    gb'.users = gb.users
@@ -190,7 +188,7 @@ removeFile[first.next.next, first.next.next.next, file, owner]
 
 pred show {}
 run init
-run torun for 6 but 0 Modes
+run torun for 7 but 0 Modes
 //run removeUser for 1 but 0 Modes
 //run upgradePremium
 //run downgradeBasic
