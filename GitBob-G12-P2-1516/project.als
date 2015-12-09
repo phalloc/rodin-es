@@ -73,9 +73,9 @@ pred downgradeBasic [gb, gb' : GitBob, usr:Reg_User]{ // restriction 8,9
 	some u,u':Reg_User | u = usr 
                                       and u.type = Premium
                                       and u'.type = Basic
-										   and u'.email = u.email
-										   and u'.id = u.id
-                                      //and dom[gb.shares <: usr]  not in dom[gb.modes <: Secure]  //restriction 31
+									  and u'.email = u.email
+								      and u'.id = u.id
+                                      //and dom[gb.shares <: usr]  not in dom[gb.modes <: Secure]  //restriction 31, bad sintax ?
                                       and gb'.users = gb.users - u + u'
     gb'.files = gb.files
     gb'.shares = gb.shares
@@ -94,9 +94,8 @@ pred addFile[gb, gb' : GitBob, f:Reg_File, s:Int, own:Reg_User]{
 pred removeFile[gb, gb' : GitBob, f:Reg_File, u:Reg_User]{
    some file:gb.files | file = f // restriction 18
    u in gb.shares[f]
-   (u = f.owner and gb.modes[f]=Readonly) => gb'.files = gb.files - f else gb'.files=gb.files
-   //gb.modes[f]=Readonly and f.owner = u implies gb'.files = gb.files - {file:gb.files | file= f} //restriction 33
-   //gb.modes[f] != Readonly implies  gb'.files = gb.files - {file:gb.files | file= f}
+   gb.modes[f]=Readonly and f.owner = u implies gb'.files = gb.files - {file:gb.files | file= f} //restriction 33
+   gb.modes[f] != Readonly implies  gb'.files = gb.files - {file:gb.files | file= f}
    gb'.users = gb.users
    gb'.modes = gb.modes
 }
@@ -120,8 +119,8 @@ pred shareFile[gb,gb' : GitBob, file:Reg_File, u1,u2:Reg_User]{ //restriction 26
    u1 in gb.shares[file]
    u2 in gb.users
    u2 not in gb.shares[file] // restriction 27
-   all u : gb.shares[file] | u.type = Premium and gb.modes[file] = Secure and gb'.shares = gb.shares + file -> u2 // restriction 30
-   /*all u : gb.shares[file] |*/ gb.modes[file] != Secure and gb'.shares = gb.shares + file -> u2
+   all u : gb.shares[file] | u.type = Premium and gb.modes[file] = Secure implies gb'.shares = gb.shares + file -> u2 // restriction 30
+   gb.modes[file] != Secure implies gb'.shares = gb.shares + file -> u2
    gb'.users = gb.users
    gb'.files = gb.files
    gb'.modes = gb.modes
@@ -142,19 +141,11 @@ pred changeSharingMode[gb,gb' : GitBob, file:Reg_File, usr:Reg_User, mode:Modes]
     usr = file.owner //restriction 35
     file in gb.files
     gb'.modes = gb.modes
-    /*all u : gb.shares[file] |*/ mode = Readonly and gb'.modes[file] = mode
-    /*all u : gb.shares[file] | */mode = Regular and gb'.modes[file] = mode
-    all u : gb.shares[file] | u.type = Premium and mode = Secure and gb'.modes[file] = mode //restriction 36
+    mode = Readonly implies gb'.modes[file] = mode
+    mode = Regular implies gb'.modes[file] = mode
+    all u : gb.shares[file] | u.type = Premium and mode = Secure implies gb'.modes[file] = mode //restriction 36
     gb'.users = gb.users
     gb'.files = gb.files
-}
-
-
-//predicates
-pred init [gb : GitBob] { // restriction 4,13,23
-  no gb.users
-  no gb.files
-  no gb.shares
 }
 
 
@@ -175,26 +166,14 @@ fact traces{
        changeSharingMode[gb, gb', file, user, mode]  
 }
 
-pred torun[usr1, usr2, usr3:Reg_User, file:Reg_File, size:Int, owner:Reg_User]{
-init[first]
-newUser[first, first.next, usr1]
-addFile[first.next, first.next.next, file, size, owner]
-removeFile[first.next.next, first.next.next.next, file, owner]
-//upgradePremium[first.next, first.next.next , usr1]
-//downgradeBasic[first.next.next, first.next.next.next, usr2]
-//newUser[first.next.next, first.next.next.next, usr2]
-//upgradePremium[g''',g'''',usr1]l
+//predicates
+pred init [gb : GitBob] { // restriction 4,13,23
+  no gb.users
+  no gb.files
+  no gb.shares
 }
 
-pred show {}
 run init
-run torun for 7 but 0 Modes
-//run removeUser for 1 but 0 Modes
-//run upgradePremium
-//run downgradeBasic
-//run addFile for 3 but 0 Modes
-//run removeFile for 10 but 0 Modes
-//run uploadFile for 3 but 0 Modes 
 
 
 
