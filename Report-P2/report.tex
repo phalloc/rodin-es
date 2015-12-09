@@ -42,7 +42,7 @@
 \renewcommand{\footrulewidth}{0pt} % Remove footer underlines
 \setlength{\headheight}{13.6pt} % Customize the height of the header
 \usepackage{enumitem}
-\setlist{leftmargin=35mm}
+\setlist{leftmargin=40mm}
 \usepackage{graphicx}
 
 \numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
@@ -77,71 +77,61 @@
 
 \maketitle % Print the title
 
-\section{Project Approach}
-Given the operations and restrictions presented in the project statement the group decided to use a hierarchical approach, where each machine would be responsible for a specific group of operations and restrictions. This allows the use of a refinement process where each machine considers a single dimension and is then refined and expanded with the operations and restrictions of the next dimension. The used machines are explained in the following section, ordered by the refining sequence (each item refines the previous).
+\section{Project Architecture}
+This project is based on a set of signatures representing the elements of the model. Each signature can be seen as a class containing attributes, is this case, other signatures. To model the state, and allow the "passing of time" each function operates on the present instance of GitBob and return a new, changed one. The used signatures and their roles is the following:
 
-\section{Signatures Modeling and Explanation}
-
-
-\begin{figure}[h]
-  \centering
-  \begin{minipage}[b]{0.25\textwidth}
-    \includegraphics[width=\textwidth]{sig_reg_user.png}
-    \caption{Flower one.}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[b]{0.3\textwidth}
-    \includegraphics[width=\textwidth]{sig_reg_file.png}
-    \caption{Flower two.}
-  \end{minipage}
-  \hfill
-   \begin{minipage}[b]{0.35\textwidth}
-    \includegraphics[width=\textwidth]{sig_gitbob.png}
-    \caption{Flower one.}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[b]{0.2\textwidth}
-    \includegraphics[width=\textwidth]{sig_types.png}
-    \caption{Flower two.}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[b]{0.35\textwidth}
-    \includegraphics[width=\textwidth]{sig_modes.png}
-    \caption{Flower two.}
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \begin{minipage}[b]{0.35\textwidth}
-    \includegraphics[width=\textwidth]{sig_gitbob.png}
-    \caption{Flower one.}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[b]{0.2\textwidth}
-    \includegraphics[width=\textwidth]{sig_types.png}
-    \caption{Flower two.}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[b]{0.35\textwidth}
-    \includegraphics[width=\textwidth]{sig_modes.png}
-    \caption{Flower two.}
-  \end{minipage}
-\end{figure}
-
-\section{Interactive Prover}
-The following profs were not automatically proved and required the group intervention
-\begin{multicols}{2}
 \begin{itemize}
-	\item[\textbf{Machine mac\_files}] uploadFile/inv4/INV
-	\item[\textbf{Machine mac\_shares}] addFile/inv2/INV
-	\item[\textbf{Machine mac\_shares}] downgradeBasic/inv6/INV
-	\item[\textbf{Machine mac\_shares}] uploadFile/inv5/INV
-	\item[\textbf{Machine mac\_backups}] uploadFileWithBackup/inv2/INV
-	\item[\textbf{Machine mac\_backups}] addFile/inv3/INV
-	\item[\textbf{Machine mac\_backups}] uploadFileWithBackup/inv2/INV
-	\item[]
+	\item[\textbf{Sig.Email}] A signature representing all the emails that users can register in GitBob
+	\item[\textbf{Sig.User}] A signature representing all the users that can register in GitBob
+	\item[\textbf{Sig.Reg\_User}] A registered user is a signature with 3 relations, to respectively, one User, one Email and one Type. A diagram of a registered user can be seen in Figure \ref{fig:reg_user}.1
+	\item[\textbf{Sig.File}] A signature representing all the files than can be uploaded to GitBob
+	\item[\textbf{Sig.Reg\_File}] A registered file is a signature that models the files when they are uploaded to GitBob. Is has 4 relations, one File, two Integers representing the size and version and one Reg\_User, the owner. A diagram of a registered file can be seen in Figure \ref{fig:reg_file}.2 
+	\item[\textbf{Sig.Type}] An abstract class representing the profile type. It is extended by the Signatures Basic and Premium. A diagram of the Signature Type and its extensions can be seen in Figure \ref{fig:types}.3
+	\item[\textbf{Sig.Basic, Premium}] The extensions of the Signature Type
+	\item[\textbf{Sig.Mode}] An abstract class representing the possible sharing modes of a file. It is extended by the Signatures Regular, Secure and Readonly. A diagram of the Signature Mode can be seen in Figure \ref{fig:modes}.4
+	\item[\textbf{Sig.Regular, Secure, Readonly}] The extensions of the Signature Mode
+	\item[\textbf{Sig.GitBob}] This is the main signature of the model. It holds the set of registered users, the set of uploaded files and the relations that model the shares and modes of the uploaded files. This is also the signature that changes over time to allow that functions can operate over the model. The list of predicates that is allowed to change the state is defined in the fact "traces". A diagram of GitBob can be seen in Figure \ref{fig:gitbob}.5
 \end{itemize}
-\end{multicols}
+
+\section{Modelling Diagrams}
+\begin{figure}[h]
+  \centering
+  \begin{minipage}{0.4\textwidth}
+    \includegraphics[width=\textwidth]{sig_reg_user.png}
+    \label{fig:reg_user}
+    \caption{}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.55\textwidth}
+    \includegraphics[width=\textwidth]{sig_reg_file.png}
+    \label{fig:reg_file}
+    \caption{}
+  \end{minipage}
+  \hfill
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{sig_types.png}
+    \label{fig:types}
+    \caption{}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{sig_modes.png}
+    \label{fig:modes}
+    \caption{}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}
+\centering
+ \begin{minipage}[b]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{sig_gitbob.png}
+    \label{fig:gitbob}
+    \caption{}
+  \end{minipage}
+\end{figure}
 
 \end{document}

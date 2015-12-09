@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.27)  5 DEC 2015 16:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.27)  9 DEC 2015 00:30
 entering extended mode
 **report.tex
 (report.tex
@@ -957,85 +957,81 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 79.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 84.
+
+Overfull \hbox (1.36603pt too wide) in paragraph at lines 88--89
+\T1/futs/m/n/10.95 has 4 re-la-tions, one File, two In-te-gers rep-re-sent-ing 
+the size and ver-sion and one Reg_User,
+ []
+
 <sig_reg_user.png, id=1, 184.43906pt x 97.11281pt>
 File: sig_reg_user.png Graphic file (type png)
  <use sig_reg_user.png>
-Package pdftex.def Info: sig_reg_user.png used on input line 89.
-(pdftex.def)             Requested size: 127.69577pt x 67.2361pt.
+Package pdftex.def Info: sig_reg_user.png used on input line 100.
+(pdftex.def)             Requested size: 204.3101pt x 107.57568pt.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 103.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 103.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 103.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 103.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 103.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 103.
 
 <sig_reg_file.png, id=3, 254.45062pt x 97.11281pt>
 File: sig_reg_file.png Graphic file (type png)
  <use sig_reg_file.png>
-Package pdftex.def Info: sig_reg_file.png used on input line 94.
-(pdftex.def)             Requested size: 153.23648pt x 58.48595pt.
-
-<sig_gitbob.png, id=4, 216.05719pt x 242.40562pt>
-File: sig_gitbob.png Graphic file (type png)
- <use sig_gitbob.png>
-Package pdftex.def Info: sig_gitbob.png used on input line 99.
-(pdftex.def)             Requested size: 178.77719pt x 200.58629pt.
-
-<sig_types.png, id=5, 142.28156pt x 146.79843pt>
-File: sig_types.png Graphic file (type png)
- <use sig_types.png>
-Package pdftex.def Info: sig_types.png used on input line 104.
-(pdftex.def)             Requested size: 102.15504pt x 105.40358pt.
-
-<sig_modes.png, id=6, 228.855pt x 161.10187pt>
-File: sig_modes.png Graphic file (type png)
- <use sig_modes.png>
-Package pdftex.def Info: sig_modes.png used on input line 109.
-(pdftex.def)             Requested size: 178.77719pt x 125.85315pt.
-File: sig_gitbob.png Graphic file (type png)
-
-<use sig_gitbob.png>
-Package pdftex.def Info: sig_gitbob.png used on input line 117.
-(pdftex.def)             Requested size: 178.77719pt x 200.58629pt.
-File: sig_types.png Graphic file (type png)
- <use sig_types.png>
-Package pdftex.def Info: sig_types.png used on input line 122.
-(pdftex.def)             Requested size: 102.15504pt x 105.40358pt.
-File: sig_modes.png Graphic file (type png)
- <use sig_modes.png>
-Package pdftex.def Info: sig_modes.png used on input line 127.
-(pdftex.def)             Requested size: 178.77719pt x 125.85315pt.
+Package pdftex.def Info: sig_reg_file.png used on input line 106.
+(pdftex.def)             Requested size: 280.93225pt x 107.2245pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[1
+<sig_types.png, id=4, 142.28156pt x 146.79843pt>
+File: sig_types.png Graphic file (type png)
+ <use sig_types.png>
+Package pdftex.def Info: sig_types.png used on input line 116.
+(pdftex.def)             Requested size: 153.23648pt x 158.11658pt.
+
+<sig_modes.png, id=5, 228.855pt x 161.10187pt>
+File: sig_modes.png Graphic file (type png)
+ <use sig_modes.png>
+Package pdftex.def Info: sig_modes.png used on input line 122.
+(pdftex.def)             Requested size: 229.85081pt x 161.80943pt.
 
 
-{C:/Users/Tiago Diogo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./sig
-_reg_user.png> <./sig_reg_file.png> <./sig_gitbob.png> <./sig_types.png> <./sig
-_modes.png>]
-LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 136.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Overfull \hbox (0.66422pt too wide) in paragraph at lines 140--141
-[]\T1/futs/m/n/10.95 uploadFileWithBackup/inv2/INV 
- []
+<sig_gitbob.png, id=6, 216.05719pt x 242.40562pt>
+File: sig_gitbob.png Graphic file (type png)
+ <use sig_gitbob.png>
+Package pdftex.def Info: sig_gitbob.png used on input line 131.
+(pdftex.def)             Requested size: 255.39154pt x 286.54657pt.
+ [1
 
 
-Overfull \hbox (0.66422pt too wide) in paragraph at lines 142--143
-[]\T1/futs/m/n/10.95 uploadFileWithBackup/inv2/INV 
- []
-
-[2] (report.aux) ) 
+{C:/Users/Tiago Diogo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2 <.
+/sig_reg_user.png> <./sig_reg_file.png> <./sig_types.png> <./sig_modes.png> <./
+sig_gitbob.png>] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 6463 strings out of 493673
- 92734 string characters out of 3143940
- 320196 words of memory out of 3000000
- 9668 multiletter control sequences out of 15000+200000
- 63190 words of font info for 70 fonts, out of 3000000 for 9000
+ 6493 strings out of 493673
+ 93155 string characters out of 3143940
+ 322236 words of memory out of 3000000
+ 9696 multiletter control sequences out of 15000+200000
+ 81794 words of font info for 93 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 41i,10n,47p,539b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/cm-super/sftt1440.pfb>
-Output written on report.pdf (2 pages, 97511 bytes).
+ 41i,10n,47p,492b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fon
+tname/8r.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.
+enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/cm-super/sftt1440.pfb>
+Output written on report.pdf (2 pages, 97453 bytes).
 PDF statistics:
  34 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
